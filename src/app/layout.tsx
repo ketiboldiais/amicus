@@ -3,8 +3,8 @@ import "katex/dist/katex.min.css";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Oldi's Outlines",
-  description: "Law School Outlines",
+  title: "Amicus",
+  description: "Math, Philosophy, and Law School Outlines",
 };
 
 export default function RootLayout({

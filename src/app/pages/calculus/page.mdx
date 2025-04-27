@@ -1,0 +1,69 @@
+import MdxLayout from "@/components/mdx-layout";
+import { Average_Rate_of_Change } from "@/components/Calculus";
+import { One_Over_X_Plot } from "@/components/Calculus";
+
+
+# Calculus
+
+<TOC>
+
+- [Limits](#limits)
+- [Average Rate of Change](#average-rate-of-change)
+- [The Slope-Tangent Relation](#the-slope-tangent-relation)
+
+
+</TOC>
+
+## Limits
+- Informally: Let ${f}$ be a function in ${\reals.}$ Suppose ${f(x)}$ is defined on an open interval about ${c,}$ except possibly at ${c}$ itself. We write
+  $$
+    \lim_{x \to a} f(x) = L
+  $$
+  if we can make the values of ${f(x)}$ arbitrarily close to ${L}$ by inputting ${x}$ sufficiently close to ${a}$ from either side of ${a}$ but not equal to ${a.}$
+- __*example*__. Consider the function ${f(x) = 1/x}$ with domain ${[0, \infty).}$ Examining a table of increasingly large values of ${x}$ alongside its graph:
+  <Cols>
+
+
+  | ${x}$      | ${f(x)}$   |
+  | ---------- | ---------- |
+  | ${1}$      | ${1}$      |
+  | ${2}$      | ${0.5}$    |
+  | ${\vdots}$ | ${\vdots}$ |
+  | ${5}$      | ${0.2}$    |
+  | ${\vdots}$ | ${\vdots}$ |
+  | ${10}$     | ${0.1}$    |
+  | ${\vdots}$ | ${\vdots}$ |
+  | ${100}$    | ${0.01}$   |
+  | ${\vdots}$ | ${\vdots}$ |
+  | ${1000}$   | ${0.001}$  |
+  | ${\vdots}$ | ${\vdots}$ |
+  | ${10~000}$ | ${0.0001}$ |
+  | ${\vdots}$ | ${\vdots}$ |
+
+  <One_Over_X_Plot/>
+
+  </Cols>
+
+  We see that ${f(x)}$ grows increasingly small as ${x}$ grows increasingly large (i.e., tending towards positive infinity).
+- Limits are a formal description of a function's behavior (what its outputs look like) for inputs near, but not equal to, a particular value.
+
+## Average Rate of Change
+- Let ${f: x \to y}$ be a function ${\reals.}$ The average rate of change of ${y = f(x)}$ with respect to ${x}$ over the interval ${[x_1, x_2]}$ (denoted ${\Delta y / \Delta x}$) is given by the relation:
+  $$
+    \dfrac{\Delta y}{\Delta x} = \dfrac{f(x_2) - f(x_1)}{x_2 - x_1} = \dfrac{f(x_1 + h) - f(x_1)}{h}
+  $$
+  where ${x_2 = x_1 + h.}$
+- Geometrically, the rate of change of ${f}$ over the interval ${[x_1, x_2]}$ is the slope of the line through the points ${P(x_1, f(x_1))}$ and ${Q(x_2, f(x_2)).}$
+  <Average_Rate_of_Change/>
+
+## The Slope-Tangent Relation 
+- The tangent line to the curve ${y = f(x)}$ at the point ${P(a, f(a))}$ is the line through ${P}$ with slope
+  $$
+    m = \lim_{x \to a} \dfrac{f(x) - f(a)}{x - a}
+  $$
+  provided this limit exists.
+
+
+export default function MDXPage({ children }) {
+    return <MdxLayout>{children}</MdxLayout>
+}

@@ -1,1 +1,1 @@
-This is the documentation website for Algebron, a TypeScript math library for scientific and symbolic computation.
+This is the repository for Amicus, a collection of my notes from undergrad and law school.
