@@ -10,3 +10,4 @@ export class Integer {
 export function int(value: number) {
 	return new Integer(value);
 }
+

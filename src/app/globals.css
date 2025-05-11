@@ -291,7 +291,7 @@ blockquote {
   padding: 5px 10px;
   width: 93%;
   /* border-left: solid 2px rgb(188, 188, 188); */
-  margin: 2vh auto;
+  margin: 1vh auto;
   background-color: var(--blockquote-bg);
   border-radius: 5px;
 }
@@ -355,6 +355,11 @@ strong em {
   font-weight: bold;
   font-style: normal;
   font-size: 1.1rem;
+}
+
+del {
+  font-variant: small-caps;
+  text-decoration: none;
 }
 
 aside {

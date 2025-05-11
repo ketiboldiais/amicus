@@ -1,6 +1,9 @@
 import MdxLayout from "@/components/mdx-layout";
-import { Average_Rate_of_Change } from "@/components/Calculus";
-import { One_Over_X_Plot } from "@/components/Calculus";
+import {
+  AVERAGE_RATE_OF_CHANGE,
+  ONE_OVER_X_PLOT,
+  REAL_LINE_APPROACHING,
+} from "@/components/Calculus";
 
 
 # Calculus
@@ -8,6 +11,7 @@ import { One_Over_X_Plot } from "@/components/Calculus";
 <TOC>
 
 - [Limits](#limits)
+  - [One-sided Limits](#one-sided-limits)
 - [Average Rate of Change](#average-rate-of-change)
 - [The Slope-Tangent Relation](#the-slope-tangent-relation)
 
@@ -40,12 +44,28 @@ import { One_Over_X_Plot } from "@/components/Calculus";
   | ${10~000}$ | ${0.0001}$ |
   | ${\vdots}$ | ${\vdots}$ |
 
-  <One_Over_X_Plot/>
+  <ONE_OVER_X_PLOT/>
 
   </Cols>
 
   We see that ${f(x)}$ grows increasingly small as ${x}$ grows increasingly large (i.e., tending towards positive infinity).
 - Limits are a formal description of a function's behavior (what its outputs look like) for inputs near, but not equal to, a particular value.
+
+### One-sided Limits
+- If we look at the real line, we can approach a particular number on the line from our left (negative infinity) or from our right (positive infinity).
+  <REAL_LINE_APPROACHING/>
+- Some functions have different limits for a particular value, depending on whether we approach that value from the left or right. One sided limits are what allow us to formally describe these functions' behavior.
+- __*definition: lefthand limit*__. We write
+  $$
+    \lim_{x \to c^-} f(x) = L
+  $$ 
+  if we can make the values of ${f(x)}$ arbitrarily close to ${L}$ by inputting ${x}$ sufficiently close to, and less than, ${c.}$ If ${L}$ exists, we call ${L}$ the __lefthand limit__ of ${f.}$
+- __*definition: righthand limit*__. We write
+  $$
+    \lim_{x \to c^+} f(x) = L
+  $$ 
+  if we can make the values of ${f(x)}$ arbitrarily close to ${L}$ by inputting ${x}$ sufficiently close to, and greater than, ${c.}$ If ${L}$ exists, we call ${L}$ the __righthand limit__ of ${f.}$
+
 
 ## Average Rate of Change
 - Let ${f: x \to y}$ be a function ${\reals.}$ The average rate of change of ${y = f(x)}$ with respect to ${x}$ over the interval ${[x_1, x_2]}$ (denoted ${\Delta y / \Delta x}$) is given by the relation:
@@ -54,7 +74,8 @@ import { One_Over_X_Plot } from "@/components/Calculus";
   $$
   where ${x_2 = x_1 + h.}$
 - Geometrically, the rate of change of ${f}$ over the interval ${[x_1, x_2]}$ is the slope of the line through the points ${P(x_1, f(x_1))}$ and ${Q(x_2, f(x_2)).}$
-  <Average_Rate_of_Change/>
+
+  <AVERAGE_RATE_OF_CHANGE/>
 
 ## The Slope-Tangent Relation 
 - The tangent line to the curve ${y = f(x)}$ at the point ${P(a, f(a))}$ is the line through ${P}$ with slope
