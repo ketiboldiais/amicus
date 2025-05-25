@@ -9,7 +9,7 @@ export default function Home() {
         <article className="article-main">
           <p>
             This is a collection of my notes and outlines from undergrad and law
-            school. I was a math/philosophy major as an undergrad before pursuing my JD—I hope anyone else following this path finds these resources helpful! 
+            school. I studied math and philosophy as an undergrad at the <Link target="rel" href="https://en.wikipedia.org/wiki/University_of_Illinois_Urbana-Champaign">University of Illinois</Link> before pursuing my JD at <Link target="rel" href="https://en.wikipedia.org/wiki/University_of_Wisconsin_Law_School">UW Madison</Link>—I hope anyone else following this path finds these resources helpful! 
           </p>
           <h2>Math/Philosophy Notes</h2>
           <p>These are notes from my undergrad math and philosophy courses.</p>
@@ -31,7 +31,7 @@ export default function Home() {
           </ol>
         </article>
       </main>
-      <footer>Ketib Oldiais © 2024</footer>
+      <footer>Ketib Oldiais © 2025</footer>
     </div>
   );
 }

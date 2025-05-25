@@ -12,6 +12,9 @@ import {
 
 - [Limits](#limits)
   - [One-sided Limits](#one-sided-limits)
+  - [Limit Laws](#limit-laws)
+  - [Limits of Polynomials](#limits-of-polynomials)
+  - [Limits of Rational Functions](#limits-of-rational-functions)
 - [Average Rate of Change](#average-rate-of-change)
 - [The Slope-Tangent Relation](#the-slope-tangent-relation)
 
@@ -49,7 +52,7 @@ import {
   </Cols>
 
   We see that ${f(x)}$ grows increasingly small as ${x}$ grows increasingly large (i.e., tending towards positive infinity).
-- Limits are a formal description of a function's behavior (what its outputs look like) for inputs near, but not equal to, a particular value.
+- Limits are a mathematical description of a function's behavior (what its outputs look like) for inputs near, but not equal to, a particular value.
 
 ### One-sided Limits
 - If we look at the real line, we can approach a particular number on the line from our left (negative infinity) or from our right (positive infinity).
@@ -65,6 +68,32 @@ import {
     \lim_{x \to c^+} f(x) = L
   $$ 
   if we can make the values of ${f(x)}$ arbitrarily close to ${L}$ by inputting ${x}$ sufficiently close to, and greater than, ${c.}$ If ${L}$ exists, we call ${L}$ the __righthand limit__ of ${f.}$
+
+### Limit Laws
+- Where ${c}$ is some real number, the following laws hold.
+
+| Law  | Condition    |
+| --- | --- |
+| ${\lim\limits_{x \to c} (f(x) + g(x)) = \lim\limits_{x \to c} f(x) + \lim\limits_{x \to c} g(x)}$ | |
+| ${\lim\limits_{x \to c} (f(x) - g(x)) = \lim\limits_{x \to c} f(x) - \lim\limits_{x \to c} g(x)}$ | |
+| ${\lim\limits_{x \to c} (f(x) \cdot g(x)) = \lim\limits_{x \to c} f(x) \cdot \lim\limits_{x \to c} g(x)}$ | |
+| ${\lim\limits_{x \to c} (k \cdot f(x)) = k \cdot \lim\limits_{x \to c} f(x)}$ | Where ${k}$ is some real constant. |
+| ${\lim\limits_{x \to c} \left(\dfrac{f(x)}{g(x)}\right) = \dfrac{ \lim\limits_{x \to c} f(x) }{ \lim\limits_{x \to c} g(x) }}$ | Provided ${\lim\limits_{x \to c} g(x) \neq 0.}$ |
+| ${\lim\limits_{x \to c} (f(x))^n = \left(\lim\limits_{x \to c} f(x)\right)^n}$ | Where ${n}$ is a positive integer. | 
+| ${\lim\limits_{x \to c} \sqrt[n]{f(x)} = \sqrt[n]{\lim\limits_{x \to c} f(x)} = \left(\lim\limits_{x \to c} f(x)\right)^{1/n}}$ | Where ${n}$ is a positive integer. | 
+
+### Limits of Polynomials 
+- If ${P(x) = a_n x^n + a_{n-1}x^{n-1} + \ldots + a_0,}$ then
+  $$
+    \lim_{x \to c} P(x) = P(c) = a_n c^n + a_{n-1} c^{n-1} + \ldots a_0.
+  $$
+- I.e., to evaluate the limit of a polynomial where ${x}$ approaches some real number ${c,}$ simply plug in ${c.}$
+
+### Limits of Rational Functions
+- If ${P(x)}$ and ${Q(x)}$ are polynomials and ${Q(c) \neq 0,}$ then
+  $$
+    \lim_{x \to c} \dfrac{P(x)}{Q(x)} = \dfrac{P(c)}{Q(c)}.
+  $$
 
 
 ## Average Rate of Change

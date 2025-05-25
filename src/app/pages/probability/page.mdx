@@ -1,0 +1,45 @@
+import MdxLayout from "@/components/mdx-layout";
+import {
+  SAMPLE_SPACE_1,
+  TETRAHEDRAL_ROLL_1,
+  TETRAHEDRAL_TREE,
+  RECTANGLE_TARGET,
+} from "@/components/Probability";
+
+
+
+# Probability
+
+<TOC>
+
+
+
+</TOC>
+
+## Probabilistic Models
+- A __probabilistic model__ is a quantitative description of a phenomenon or experiment whose outcome is uncertain.
+- The description is made using two mathematical objects:
+  1. A __sample space__—the set of all possible outcomes.
+  2. A __probability law__—a function that maps probabilities to outcomes or collections of outcomes.  
+
+## Sample Space
+- We usually denote a sample space with the Greek letter ${\Omega.}$ 
+- As aforementioned, the sample space is the set of all possible outcomes of an experiment.
+  <SAMPLE_SPACE_1/>
+- The elements of the sample space (i.e., outcomes) should have the following properties:
+  1. The outcomes are _mutually exclusive_ — if one outcome occurs, there's no way another occurs as well. 
+  2. The outcomes are _collectively exhaustive_ — the outcomes, all together, cover every possible result of the experiment or phenomenon.
+  3. The outcomes are at the _"right" granularity_ — the outcomes include relevant details and exclude irrelevant ones.   
+- __*example*__. Consider an experiment where we roll a tetrahedral die twice. We can lay out the possible outcomes with a grid.
+  <TETRAHEDRAL_ROLL_1/>
+  - Another way to visualize this experiment is with a _tree_.
+  <TETRAHEDRAL_TREE/>
+  - Once we've identified the sample space, we specify a _probability law_. For simplicity, we'll specify the law as follows: "All sixteen outcomes are equally likely." 
+- __*example*__. Consider a square target of dimensions ${1 \times 1.}$ The experiment: We shoot at the target, and the outcomes we're concerned with are the target hits. Here, the sample space is _continuous_. There are infinitely many points comprising the square target. 
+  <RECTANGLE_TARGET/>
+  - In set notation: ${\{(x,y) \in \reals^2 : 0 \leq xy \leq 1\}}$
+
+
+export default function MDXPage({ children }) {
+    return <MdxLayout>{children}</MdxLayout>
+}
