@@ -1,0 +1,74 @@
+import MdxLayout from "@/components/mdx-layout";
+
+# Immigration Law
+
+
+<TOC>
+
+- [Ways to Enter the United States](#ways-to-enter-the-united-states)
+- [Immigrant vs. Nonimmigrant Visas](#immigrant-vs-nonimmigrant-visas)
+- [Immigrant Visas](#immigrant-visas)
+  - [The 7% Rule](#the-7-rule)
+
+</TOC>
+
+## Ways to Enter the United States
+- There are four types of legal authorizations for entering the United States:
+  1. Immigrant visa.
+  2. Nonimmigrant visa.
+  3. Parole.
+  4. Asylum.
+- The vast majority of those entering the United States do so through a visa (immigrant or nonimmigrant).
+
+<aside>
+A visa is an endorsement on a passport showing that the holder is allowed to enter, leave, or stay for a specific period of time. The word traces to the French _visa_, which itself originates in the Latin _charta visa_ (a paper that has been seen).
+</aside>
+
+## Immigrant vs. Nonimmigrant Visas
+- There are several distinctions between immigrant and nonimmigrant visas.
+
+<Cols of={2}>
+    <div>
+    <b className="text-center"><u>Immigrant Visa</u></b>
+    <ul>
+        <li>Allows noncitizen to enter U.S., remain indefinitely, and work.</li>
+        <li>Upon admission, noncitizen receives a __green card__ (unofficial term for a __permanent resdient card__, the
+            document that proves lawful permanent residence status).</li>
+    </ul>
+    </div>
+    <div>
+    <b className="text-center"><u>Nonimmigrant Visa</u></b>
+    <ul>
+        <li>Allows noncitzen to enter U.S. for a limited time.</li>
+        <li>Restricts activities a noncitizen can engage in.</li>
+        <li>_Does not_ provide a Green Card.</li>
+    </ul>
+    </div>
+</Cols>
+
+## Immigrant Visas
+- There is an annual ceiling on the number of immigrant visas issued. 
+- There are also per-country limits called __quotas__ (each country is allocated a finite amount of visas).
+- There are annual limits per type of immigrant visa issued.
+- To obtain a visa, noncitizens file a __petition__ (i.e., "petition for a visa").
+- Immigration officials continue processing these petitions, even if the particular country's quota has been met. Instead of denying these petitions, immigration officials place petitioners on a waitlist called the __immigration queue__.
+  - The petitioner's place in this queue is a function of three variables:
+    1. her country of origin,
+    2. the type of visa applied for, and
+    3. whether she qualifies for a preference in relation to others in the queue. 
+
+### The 7% Rule 
+- Per-country quotas are based on the 7% rule. 
+- With limited exceptions, the total number of family-based and employment-based immigrants admitted from any one country in a fiscal year can't exceed 7% of the total number of all visas from the visa-preference categories. 
+- __*example*__. Suppose the total number of all visas from the visa-preference categories is ${1~000~000.}$ Then the total number of family- and employment-based immigrants admitted from, say, India, must be less than or equal to ${70~000}$ in any given fiscal year.
+- In general, there are ${675~000}$ total immigrant visas per year. In practice, this number varies because of the myriad of exceptions in immigration law. Keeping this caveat in mind:
+  - ${\approx 480~000}$ visas are allocated for family-sponsored immigrants.
+  - ${\approx 140~000}$ visas are allocated for employment-based immigrants.
+  - ${\approx 55~000}$ visas are allocated for diversity immigrants.
+ 
+
+
+export default function MDXPage({ children }) {
+    return <MdxLayout>{children}</MdxLayout>
+
+}

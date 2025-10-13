@@ -347,7 +347,7 @@ footer {
 
 figure {
   width: 100%;
-  margin: 5px auto;
+  margin: 5vh auto;
 }
 
 strong em {
@@ -411,19 +411,21 @@ h5::before { content: counter(part) "." counter(subpart) "." counter(chapter) ".
 h6::before { content: counter(part) "." counter(subpart) "." counter(chapter) "." counter(module) "." counter(submodule) "\00a0" "\00a0" "\00a0"; }
 
 a {
-  color: inherit;
+  /* color: inherit;
   border-bottom: 1px dotted var(--grey);
   display: inline-block;
   padding-bottom: 0px;
   background-image: linear-gradient(var(--grey) 0 0);
-  background-position: 0 100%; /*OR bottom left*/
+  background-position: 0 100%;
   background-size: 0% 1px;
   background-repeat: no-repeat;
-  transition: background-size 0.3s, background-position 0s 0.3s; /*change after the size immediately*/
+  transition: background-size 0.3s, background-position 0s 0.3s; */
+  color: rgb(51, 142, 180);
 }
 a:hover {
-  background-position: 100% 100%; /*OR bottom right*/
-  background-size: 100% 1px;
+  color: blue;
+  /* background-position: 100% 100%; */
+  /* background-size: 100% 1px; */
 }
 
 .toc a {
@@ -448,6 +450,53 @@ a:hover {
 
 .algebron-fig > div {
   font-family: KaTeX_main;
+}
+
+td.green {
+  background-color: green;
+  color: white;
+}
+
+td.brown {
+  background-color: rgb(146, 62, 34);
+  color: white;
+}
+
+td.red-brown {
+  background-color: brown;
+  color: white;
+}
+
+td.blue {
+  background-color: rgb(0, 110, 255);
+  color: white;
+}
+
+td.amber {
+  background-color: orange;
+}
+
+td.red {
+  background-color: rgb(210, 44, 44);
+  color: white;
+}
+
+td.black {
+  background-color: black;
+  color: white;
+}
+
+td.no-border-bottom {
+  border-bottom: 0;
+}
+
+td.grey {
+  background-color: rgb(187, 187, 187);
+}
+
+table.mono-table {
+  font-family: Menlo, monospace;
+  font-size: 0.85rem;
 }
 
 @media (max-width: 500px) {
@@ -681,4 +730,9 @@ details {
   /* padding: 0px 8px; */
   padding-left: 8px;
   /* background-color: rgb(228, 228, 228); */
+}
+
+.text-center {
+  text-align: center;
+  display: block;
 }
