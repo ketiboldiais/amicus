@@ -3,6 +3,34 @@ import MdxLayout from "@/components/mdx-layout";
 
 # Civil Procedure
 
+<TOC>
+
+- [Jurisdiction](#jurisdiction)
+  - [Personal Jurisdiction](#personal-jurisdiction)
+    - [In Personam Jurisdiction](#in-personam-jurisdiction)
+      - [Traditional Jurisdiction](#traditional-jurisdiction)
+      - [Modern Jurisdiction](#modern-jurisdiction)
+        - [General Personal Jurisdiction](#general-personal-jurisdiction)
+        - [Tag Jurisdiction](#tag-jurisdiction)
+        - [Specific Personal Jurisdiction](#specific-personal-jurisdiction)
+    - [In Rem Jurisdiction](#in-rem-jurisdiction)
+    - [Quasi In Rem Jurisdiction](#quasi-in-rem-jurisdiction)
+  - [Subject-matter Jurisdiction](#subject-matter-jurisdiction)
+  - [Federal-question Jurisdiction](#federal-question-jurisdiction)
+  - [Diversity Jurisdiction](#diversity-jurisdiction)
+    - [Complete Diversity of Citizenship](#complete-diversity-of-citizenship)
+    - [Amount in Controversy (AIC) Requirement](#amount-in-controversy-aic-requirement)
+  - [Supplemental Jurisdiction](#supplemental-jurisdiction)
+- [Removal](#removal)
+- [Proper Notice](#proper-notice)
+- [Service of Process](#service-of-process)
+  - [Methods of Service: Defendants within the U.S.](#methods-of-service-defendants-within-the-us)
+  - [Methods of Service: Defendants outside the U.S.](#methods-of-service-defendants-outside-the-us)
+  - [Waiver of Service](#waiver-of-service)
+- [Venue](#venue)
+
+</TOC>
+
 ## Jurisdiction
 - Jurisdiction is a court's authority to adjudicate a case and order, direct, or punish the parties of that case.
 - Absent jurisdiction, the court has no such authority.
@@ -11,6 +39,62 @@ import MdxLayout from "@/components/mdx-layout";
   1. subject-matter jurisdction,
   2. personal jurisdiction, and
   3. proper venue.  
+
+### Personal Jurisdiction
+- Personal jurisdiction is a court's power over the parties or property.
+- There are three types of personal jurisdiction:
+    - [__In personam jurisdiction__](#in-personam-jurisdiction). This is personal jurisdiction over the person. There are two types of in personam jurisdiction:
+        - [__Traditional in personam jurisdiction__](#traditional-jurisdiction). This is personal jurisdiction based on the legal framework pre-_International Shoe_. In particular, the framework based on principles outlined in _Pennoyer_.
+        - [__Modern in personam jurisdiction__](#modern-jurisdiction). This is personal jurisdiction based on the legal framework built upon _International Shoe_ and the cases thereafter. There are several types of in personam jurisdiction:
+    - [__In rem jurisdiction__](#in-rem-jurisdiction). This is jurisdiction over property located within the forum state. 
+    - [__Quasi in rem jurisdiction__](#quasi-in-rem-jurisdiction). This is jurisdiction over the defendant, based on the defendant's property within the state.
+
+#### In Personam Jurisdiction
+##### Traditional Jurisdiction
+
+<aside>
+__*comment*__. Early American courts relied on a _territorial notion_ of jurisdiction. A defendant had to be physically within the state to be subject to that state's courts. This was a logical approach, given that early American society was agragrian, travel was limited, and litigation was mostly local. Of course, with the dawn of the industrial revolution, this approach grew insufficient. Americans travelled more, interstate commerce increased, and communications technology advanced.     
+</aside>
+
+- A court has jurisdiction over a defendant if (1) the defendant is domiciled in the state, (2) the defendant is physically present in the state when served with process, or (3) gives express or implied consent to a court's personal jurisdiction.[^pennoyer]  
+[^pennoyer]: _See_ _Pennoyer v. Neff_, 95 U.S. 714, 720 (1877).
+
+##### Modern Jurisdiction
+
+###### General Personal Jurisdiction
+- Under general personal jurisdiction, a court has personal jurisdiction over a plaintiff if the defedant's contacts with the state are so systematic, continuous, and substantial that the state could be fairly called the defendant's home.[^international_shoe_1]
+
+[^international_shoe_1]: _International Shoe Co. v. Washington_, 326 U.S. 310, 317 (1945).
+
+###### Tag Jurisdiction
+- Under tag (or transient) jurisdiction, court has personal jurisdiction over a defendant if the individual defendant (not a corporation) is personally served while in the forum state.[^burnham1]
+
+[^burnham1]: _Burnham v. Superior Court_, 495 U.S. 604 (1990).
+
+###### Specific Personal Jurisdiction
+- A court has personal jurisdiction over a plaintiff if the cause of action "arise[s] out of or relate[s] to" the defendant's voluntary contacts with the forum state.[^goodyear]
+
+[^goodyear]: _Burger King Corp. v. Rudzewicz_, 471 U.S. 462, 472-73 (1985) (quoting _Helicopteros Nacionales de Colombia, S.A. v. Hall_, 466 U.S. 408, 414 (1984)); _Goodyear Dunlop Tire Operations, S.A. v. Brown_, 564 U.S. 915, 919 (2011).
+
+- A court has personal jurisdiction if: (1) the defendant's contacts show purposeful availament or purposeful direction in the forum state, (2) the claim arises out of or relates to the defendant's contacts, and (3) exercising personal jurisdiction over the defendant comports with notions of fair play and substantial justice.[^international_shoe_2]   
+
+[^international_shoe_2]: _International Shoe Co. v. Washington_, 326 U.S. 310, 317 (1945).
+
+#### In Rem Jurisdiction
+- A court has in rem jurisdiction over property if: (1) if the property is within the forum state's territorial limits and (2) the court provides proper notice to all interested parties.[^in_rem_jdx]  
+
+[^in_rem_jdx]: _Pennoyer v. Neff_, 95 U.S. 714, 722 (1978); ~Restatement (Second) Conflict of Laws~ § 56 (Am. Law. Inst. 1971).
+
+- In rem jurisdiction issues are triggered whenever you have a plaintiff suing property. These are cases where the plaintiff is trying to determine, once and for all, who owns some piece of property.
+
+#### Quasi In Rem Jurisdiction
+- A court has quasi in rem jurisdiction over a defendant if (1) the defendant's property is within the forum state, (2) the property is attached (seized) at the outset of the suit, and (3) exercising jurisdiction satisfies the minimum contacts standared.[^quasi_in_rem_jdx]
+
+[^quasi_in_rem_jdx]: _Pennoyer v. Neff_, 95 U.S. 714 (1878); _Shaffer v. Heitner_, 433 U.S. 186, 207 (1977); _International Shoe Co. v. Washington_, 326 U.S. 310 (1945). 
+
+- There are two common fact patterns that may trigger quasi in rem jurisdiction issues: 
+    1. Plaintiff ${P}$ sues defendant ${D}$ over property located in state ${S.}$ The dispute could be about ownership, usage, or some other property right. This is similar to in rem jurisdiction.
+    2. Plaintiff ${P}$ sues defendant ${D}$ for some tort or contract claim. ${D}$ has property in state ${S.}$ It's not immediately apparent if ${S}$ has in personam jurisdiction over ${D.}$ So, ${P}$ attaches the property in ${S}$ to the lawsuit. If judgment for ${P,}$ then the property in ${S}$ is sold and the proceeds serve as remedy.
 
 ### Subject-matter Jurisdiction
 - Subject-matter jurisdiction is a court's power to hear and determine cases of a particular type.[^21_cjs]
@@ -36,12 +120,100 @@ import MdxLayout from "@/components/mdx-layout";
 [^28_usc_1332]: 28 U.S.C. § 1332.
 - An individual's citizenship is determined by the individual's domicile, not residency.[^diversity_domicile]
   - Pleading Example: "John Smith, an individual, is domiciled in the state of ___ and is a citizen of that state for diversity purposes."
+  - Domicile, is determined by two elements: (i) physical presence within a state; and (ii) the mental intent to remain there or to make a home there indefinitely.[^domicile_determination] 
+  [^domicile_determination]: _Mississippi Band of Choctaw Indians v. Holyfield_, 490 U.S. 30, 48 (1989)
 [^diversity_domicile]: _Mas v. Perry_, 489 F.2d 1396, 1399 (5th Cir. 1974).
 - The citizenship of a corporation is determined by place of incorporation _and_ principal place of business—both must be affirmatively alleged.[^corporation_citizenship]
   - Pleading Example: “ABC, Inc. is a corporation incorporated in the state of __, with its principal place of business in the state of __."
-[^corporation_citizenship]: See _Getty Oil, Div. of Texaco v. Ins. Co. of North America_, 841 F.2d 1254, 1259 (5th Cir. 1988)
+[^corporation_citizenship]: See _Getty Oil, Div. of Texaco v. Ins. Co. of North America_, 841 F.2d 1254, 1259 (5th Cir. 1988).
+- The citizenship of an unincorporated association, including a limited liability company, a general partnership, and a limited partnership, is determined by the citizenship of all its members.[^llc_citizenship]
+  [^llc_citizenship]: _Harvey v. Grey Wolf Drilling Co._, 542 F.3d 1077, 1080 (5th Cir. 2008).
+  - Each member of a limited liability company or partnership must be specifically identified and citizenship alleged as to each.[^llc_citizenship2]
+  [^llc_citizenship2]: _Nunez v. ACE Am. Ins. Co._, No. 17-1593, 2017 WL 6997341, at *4 (M.D. La. Dec. 28, 2017), _report and recommendation adopted_, No. 17-1593, 2018 WL 493398 (M.D. La. Jan. 16, 2018). 
 
-#### Amount in Controversy Requirement
+#### Amount in Controversy (AIC) Requirement
+- The amount in controversy (AIC) requirement is satisified when the plaintiff adequately alleges an AIC that exceeds, or is likely to exceed, `$`75,000 (without interest and costs).[^aic] 
+[^aic]: 28 U.S.C. § 1332.
+  - Examples of sufficient allegations:
+    1. "The amount in controversy in this case exceeds `$`75,000, exclusive of interest and costs."
+    2. "The plaintiff seeks recovery of damages `$`[amount in excees of `$`75,000] in this case." 
+    2. "The plaintiff has damages of `$`[amount in excees of `$`75,000] in this case." 
+
+### Supplemental Jurisdiction
+- If a federal court has jurisdiction over one claim but lacks jurisdiction over another claim, then the federal court has jurisdiction over the latter via _supplemental jurisdiction_, so long as the latter is related to the former.[^supplemental_jdx]
+  - __*example*__. A federal court has subject-matter jurisdiction over a claim ${x,}$ but not claim ${y.}$ Claim ${y,}$ however, is related to claim ${x.}$ The federal court may hear claim ${y}$ because of its relation to ${x}$ by way of supplemental jurisdiction. 
+
+<aside>
+__*comment*__. Supplemental jurisdiction allows litigants to resolve all aspects of a controversy in a single proceeding. For example, suppose some party applies for an open carry license, and the state denies their application on the basis of certain state regulations. The party files suit with several claims: (1) a claim for a violation of their Second Amendment right to bear arms, and (2) a claim that the state regulations violate established state law. It would be easier and cheaper for the plaintiff to go to federal court for both claims via supplemental jurisdiction. Without supplemental jurisdiction, the plaintiff must take claim (1) to federal court and claim (2) to state court. 
+</aside>
+
+- If a federal court has subject-matter jurisdiction over a claim, and a state claim also arises out of that claim's underlying case or controversy, then the federal court has discretion to hear the state law claim via supplemental jurisdiction (even if the federal court lacks subject-matter jurisdiction over the state law claim).[^supplemental_jdx_2]
+- For a federal court to exercise supplemental jurisdiction under § 1367(a), the supplemental claim must arise from a "common nucleus of operative fact" as the original jurisdiction claim—the claims arise from the same case or controversy, or share the same kind of evidence, witnesses, or facts.[^supplemental_jdx_3]
+
+
+  
+[^supplemental_jdx]: _See_ 28 U.S.C. § 1367.
+[^supplemental_jdx_2]: _See_ 28 U.S.C. § 1367; _United Mine Workers v. Gibbs_, 383 U.S. 715 (1966).
+[^supplemental_jdx_3]: _See_ _United Mine Workers v. Gibbs_, 383 U.S. 715, 725 (1966).
+
+## Removal
+- A defendant may change where the case proceeds: If the case is filed in state court—but could have been originally filed in federal court—then the defendant can _remove_ the case to the federal court that would have had original jurisdiction.[^general_removal]   
+[^general_removal]: 28 U.S.C. § 1441.
+- A defendant removes a case to federal court by filing in the federal court a notice of removal.[^removal_notice]
+
+[^removal_notice]: _Circle Indus. USA, Inc. v. Parke Const. Group, Inc._, 183 F.3d 105, 109 (2d Cir. 1999).
+
+## Proper Notice
+- Under the Due Process Clause, a court cannot deprive a defendant of property without providing the defendant proper notice and an opportunity for a hearing.[^mullane1]  
+
+[^mullane1]: _Mullane v. Central Hanover Bank & Trust Co._, 339 U.S. 306 (1950).
+
+- A defendant is given proper notice if the notice is "reasonably calculated, under all the circumstances, to apprise interested parties of the pendency of the action and afford them an opportunity to present their objections.[^mullane2]
+
+[^mullane2]: _Mullane v. Central Hanover Bank & Trust Co._, 339 U.S. 306 (1950).
+
+- If the identity and address of an interested party are known or obtainable through reasonable efforts, notice through in-person delivery, registered mail, return receipt requested, or some other means likely to notify the party is required.[^mennonite]  
+
+[^mennonite]: _Mennonite Board of Missions v. Adams_, 462 U.S. 791 (1983).
+
+- If the plaintiff knows that the defendant(s) did not receive notice, the plaintiff cannot proceed unless there are no reasonable methods to notify the defendant(s).[^jones_flowers]
+
+[^jones_flowers]: _Jones v. Flowers_, 547 U.S. 220 (2006).
+
+## Service of Process
+- Service of process is proper only if the plaintiff serves the summons and complaint to the defendant within 90 days after filing the complaint.[^frcp_4_c]
+- Unless the defendant waives service, without proper service of process, the court must dismiss the action.[^murphy_bros]
+- If the plaintiff does not serve the summons and complaint to the defendant within 90 days, the court may extend the time for service for appropriate period, provided the plaintiff shows "good cause" for untimely service.[^frcp_4_m]
+  - If the plaintiff fails to make such a showing, the court must either (1) dismiss the action without prejudice against the defendant or (2) order the service be made within a specified time.[^frcp_4_m1]
+  
+[^murphy_bros]: _Murphy Bros., Inc. v. Michetti Pipe Stringing, Inc._, 526 U.S. 344 (1999).
+[^frcp_4_c]: ~Fed. R. Civ. P.~ 4(c), 4(m).
+[^frcp_4_m]: ~Fed. R. Civ. P.~ 4(m).
+[^frcp_4_m1]: ~Fed. R. Civ. P.~ 4(m).
+
+### Methods of Service: Defendants within the U.S.
+- For defendants within the U.S., a plaintiff may serve the summons and complaint through the following methods:[^frcp_4_e_2]
+  1. Personally serving the summons and complaint on the defendant;  
+  2. Leaving the summons and complaint at the defendant's usual place of abode (e.g., their home) with a person of suitable age and discretion who resides there; or 
+  3. Delivering the summons and complaint to an agent appointed by the defendant or otherwise authorized by law to receive service.  
+
+[^frcp_4_e_2]: ~Fed. R. Civ. P.~ 4(e)(2). 
+
+### Methods of Service: Defendants outside the U.S.
+- For defendants outside the U.S., a plaintiff may serve the summons and complaint in any manner, internationally agreed upon, which is reasonably calculated to give notice.[^frcp_4_f] 
+  - __*comment*__. This means the plaintiff must first consider whether a treaty is in place with the country the defendant is in, and, if such a treaty exists, whether the treaty dictates the methods of service. If no such treaty exists or if no such methods are specified, then the plaintiff may serve the summons and complaint by any method permitted by the law of the foreign country.[^frcp_4_f_2]
+
+[^frcp_4_f]: ~Fed. R. Civ. P.~ 4(f).
+[^frcp_4_f_2]: ~Fed. R. Civ. P.~ 4(f).
+
+### Waiver of Service
+- A competent defendant—specifically an individual, corporation, or association—has a duty to avoid unnecessary expenses of serving the summons by waiving service.[^frcp_4_d] 
+  - This rule does not apply to government entities, infants, or incompetents. 
+
+[^frcp_4_d]: ~Fed. R. Civ. P.~ 4(d).
+
+## Venue
+- Venue is the geographic location of the court where the case is heard. The forum state may have multiple courts, each satisfying the requirements of jurisdiction—thus, even if a court has jurisdiction, it may not be the proper venue. 
 
 export default function MDXPage({ children }) {
     return <MdxLayout>{children}</MdxLayout>

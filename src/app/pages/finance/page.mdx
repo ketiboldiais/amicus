@@ -1,0 +1,98 @@
+import MdxLayout from "@/components/mdx-layout";
+
+import {TANGENT_LINE} from "@/components/Calculus"
+
+# Finance
+
+<TOC>
+
+- [Economics](#economics)
+- [Common Terms](#common-terms)
+- [Debt Securities](#debt-securities)
+  - [Government Bonds](#government-bonds)
+    - [Treasury Bills](#treasury-bills)
+    - [Treasury Notes](#treasury-notes)
+- [Options Contracts](#options-contracts)
+
+</TOC>
+
+## Economics
+- A __market__ is a group of buyers and sellers of a particular good or service.
+  - Buyers determine the demand, and sellers determine the supply.
+- A __competitive market__ is a market where there are enough buyers and sellers that a single buyer has a negligible impact on the demand, and a single seller has a negligible impact on the supply.
+
+## Common Terms
+- A __financial instrument__ is a legal contract that creates either a financial asset for one party and/or a financial liability for another. 
+- A __security__ is any financial instrument that can be bought, sold, or exchanged (i.e., traded). 
+    - There are four types of securities:
+        1. Debt securities.
+        2. Equity securities.
+        3. Derivative securities.
+        4. Hybrid securities.
+
+## Debt Securities
+- A __debt security__ is a security where (i) one party lends money (the lender or investor) and another borrows (the borrower or issuer), and (ii) the borrower must repay the principal and interest (at the lender's rate) by a given date (called the maturity date). 
+- Debt securities are also called __fixed-income securities__ or __debt instruments__.
+- Debt securities offer a fixed stream of interest payments that must be paid by the issuer at maturity.
+- Debt securities are less risky than equity securities, since they guarantee repayment of principal and interest.
+- If the issuer goes bankrupt, debt security holders have priority over equity holders in asset distribution/sales. 
+- Common debt securities:
+  1. Government bonds
+  2. Corporate bonds
+  3. Municipal bonds
+  4. Preferred stock
+  5. Notes
+  6. Commercial papers
+  7. Asset-backed securities
+  8. Certificate of Deposits (CDs)
+  9. Collateralized Debt Obligations (CDOs)
+  10. Collateralized Mortgage Obligations (CMOs)
+  11. Mortgage-backed Securities (MBSs)
+  12. Zero-coupon Securities.
+
+### Government Bonds
+- A government bond is essentially a loan to the government.
+- When an investor ${X}$ purchases a government bond, the following events occur:
+    1. ${X}$ gives money to the government (the price paid for the bond).
+    2. The government promises to: (1) pay ${X}$ regular interest payments, and (2) completely repay the principal amount when the bond matures. 
+- Government bonds have a few key terms:
+    1. The bond's __face value__ (also called __par value__) is the amount of money the investor lends to the government, and the amount they will receive back at maturity.
+    2. The bond's __coupon rate__ is the fixed interest rate the bond pays over its lifetime.
+    3. The interest payments made by the government are called __coupon payments__.
+    4. The bond's __maturity__ is how long the government has to repay the principal amount (it could be a year, five years, seven, ten, etc.). 
+
+#### Treasury Bills
+- A __treasury bill__ (also called a __T-bill__) is a U.S. government bond that: 
+  1. matures in a year or less, 
+  2. does not make coupon payments, 
+  3. is sold at a discount from their face value, and 
+  4. the return to the investor is the difference between the purchase price and the face value received at maturity. 
+- __*example*__. ${X}$ purchases a `$`${10\,000}$ treasury bill at a discount price of `$`${9\,500,}$ maturing in one year. After one year, ${X}$ will receive the full `$`${10\,000.}$ This is a return on investment of `$`${500.}$
+    - __*note*__. The amount gained, `$`${500,}$ is subject to federal income tax, but exempt from state and local taxes. 
+
+#### Treasury Notes
+- A __treasury note__ (or __T-note__) is a U.S. government bond that:
+    1. Comes in maturities of two, three, five, seven, and ten, and
+    2. interest payouts occur every six months.
+- The interest payout from a T-note is subject to federal income tax, but exempt from state and local taxes.  
+
+## Options Contracts
+- long call
+- long put
+- covered call
+- cash secured put
+- long call spread
+- short put spread
+- short call spread
+- long put spread
+- long straddle
+- long strangle
+- long iron butterfly
+- long iron condor
+- short iron butterfly
+- short iron condor
+
+
+export default function MDXPage({ children }) {
+    return <MdxLayout>{children}</MdxLayout>
+}
