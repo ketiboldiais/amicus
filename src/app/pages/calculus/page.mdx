@@ -11,8 +11,19 @@ import {TANGENT_LINE} from "@/components/Calculus"
   - [Limit Laws](#limit-laws)
     - [Limit Sum Law](#limit-sum-law)
     - [Limit Difference Law](#limit-difference-law)
+    - [Limit Constant Multiple Law](#limit-constant-multiple-law)
+    - [Limit Product Law](#limit-product-law)
+    - [Limit Quotient Law](#limit-quotient-law)
+    - [Limit Power Law](#limit-power-law)
+    - [Limit Root Law](#limit-root-law)
+    - [Limit Constant Law](#limit-constant-law)
+    - [Limit Substitution Law I](#limit-substitution-law-i)
+    - [Limit Subsitution Law II](#limit-subsitution-law-ii)
+    - [Limit Substitution Law III](#limit-substitution-law-iii)
   - [Properties of Limits](#properties-of-limits)
     - [Direct Substitution Property](#direct-substitution-property)
+    - [Limit Inequality Theorem](#limit-inequality-theorem)
+    - [The Squeeze Theorem](#the-squeeze-theorem)
 
 
 </TOC>
@@ -82,55 +93,68 @@ import {TANGENT_LINE} from "@/components/Calculus"
 - Suppose ${c}$ is a constant and the limits ${\lim\limits_{x \to a} f(x)}$ and ${\lim\limits_{x \to a} g(x)}$ exist. Then the following laws hold.
 
 #### Limit Sum Law
-- Given functions ${f}$ and ${g,}$
-  $$
-    \lim_{x \to a} \left(~ f(x) + g(x) ~\right) = \lim_{x \to a} f(x) + \lim_{x \to a} g(x).
-  $$
+$$
+  \lim_{x \to a} \left(~ f(x) + g(x) ~\right) = \lim_{x \to a} f(x) + \lim_{x \to a} g(x).
+$$
 ####  Limit Difference Law  
-- Given functions ${f}$ and ${g,}$
-  $$
-    \lim_{x \to a} \left(~ f(x) - g(x) ~\right) = \lim_{x \to a} f(x) - \lim_{x \to a} g(x).
-  $$
+$$
+  \lim_{x \to a} \left(~ f(x) - g(x) ~\right) = \lim_{x \to a} f(x) - \lim_{x \to a} g(x).
+$$
 
-    3. __Limit Constant Multiple Law.__ 
-      $$
-        \lim_{x \to a}\left( c f(x) \right) = c \lim_{x \to a} f(x).
-      $$
-    4. __Limit Product Law.__
-      $$
-        \lim_{x \to a}\left( f(x) \cdot g(x) \right) = \lim_{x \to a} f(x) \cdot \lim_{x \to a} g(x).
-      $$
-    5. __Limit Quotient Law.__
-        $$
-          \lim_{x \to a} \dfrac{f(x)}{g(x)} = \dfrac{\lim\limits_{x \to a} f(x)}{\lim\limits_{x \to a} g(x)}
-        $$
-        provided ${\lim\limits_{x \to a} g(x) \neq 0.}$
-    6. __Limit Power Law.__
-      $$
-        \lim\limits_{x \to a} \left( f(x) \right)^n = \left( \lim_{x \to a} f(x) \right)^n.
-      $$
-    7. __Limit Root Law.__
-        $$
-          \lim\limits_{x \to a} \sqrt[n]{f(x)} = \sqrt[n]{\lim\limits_{x \to a} f(x)}
-        $$
-        where ${n}$ is a positive integer. If ${n}$ is even, we assume that ${\lim\limits_{x \to a} f(x) \gt 0.}$
-    8. __Limit Constant Law.__ Where ${c}$ is a constant,
-        $$
-          \lim_{x \to a} c = c.
-        $$
-    9. __Limit Substitution Law I.__ Given a variable ${x,}$
-        $$
-          \lim_{x \to a} x = a.
-        $$
-    10. __Limit Subsitution Law II.__ Given a variable ${x,}$
-        $$
-          \lim_{x \to a} x^n = a^n.
-        $$
-    11. __Limit Substitution Law III.__ Given a variable ${x,}$
-        $$
-          \lim_{x \to a} \sqrt[n]{x} = \sqrt[n]{a},
-        $$
-        where ${n}$ is a positive integer. If ${n}$ is even, we assume ${a \gt 0.}$
+#### Limit Constant Multiple Law 
+$$
+  \lim_{x \to a}\left( c f(x) \right) = c \lim_{x \to a} f(x).
+$$
+    
+#### Limit Product Law
+$$
+  \lim_{x \to a}\left( f(x) \cdot g(x) \right) = \lim_{x \to a} f(x) \cdot \lim_{x \to a} g(x).
+$$
+
+#### Limit Quotient Law
+$$
+  \lim_{x \to a} \dfrac{f(x)}{g(x)} = \dfrac{\lim\limits_{x \to a} f(x)}{\lim\limits_{x \to a} g(x)}
+$$
+provided ${\lim\limits_{x \to a} g(x) \neq 0.}$
+
+#### Limit Power Law
+$$
+  \lim\limits_{x \to a} \left( f(x) \right)^n = \left( \lim_{x \to a} f(x) \right)^n.
+$$
+
+#### Limit Root Law
+Where ${n}$ is a positive integer,
+
+$$
+  \lim\limits_{x \to a} \sqrt[n]{f(x)} = \sqrt[n]{\lim\limits_{x \to a} f(x)}
+$$
+
+If ${n}$ is even, we assume that ${\lim\limits_{x \to a} f(x) \gt 0.}$
+
+#### Limit Constant Law
+Where ${c}$ is a constant,
+$$
+  \lim_{x \to a} c = c.
+$$
+
+#### Limit Substitution Law I
+Given a variable ${x,}$
+$$
+  \lim_{x \to a} x = a.
+$$
+
+#### Limit Subsitution Law II
+Given a variable ${x,}$
+$$
+  \lim_{x \to a} x^n = a^n.
+$$
+
+#### Limit Substitution Law III
+Given a variable ${x,}$
+$$
+  \lim_{x \to a} \sqrt[n]{x} = \sqrt[n]{a},
+$$
+where ${n}$ is a positive integer. If ${n}$ is even, we assume ${a \gt 0.}$
      
 ### Properties of Limits
 #### Direct Substitution Property
@@ -139,6 +163,17 @@ import {TANGENT_LINE} from "@/components/Calculus"
     \lim_{x \to a} f(x) = f(a).
   $$
 
+#### Limit Inequality Theorem
+- If ${f(x) \leq g(x)}$ when ${x}$ is near ${a}$ (except possibly at ${a}$) and the limits of ${f}$ and ${g}$ both exist as ${x}$ approaches ${a,}$ then
+  $$
+    \lim_{x \to a} f(x) \leq \lim_{x \to a} g(x).
+  $$
+
+#### The Squeeze Theorem
+- If ${f(x) \leq g(x) \leq h(x)}$ when ${x}$ is near ${a}$ (except possibly at ${a}$) and ${\lim\limits_{x \to a} f(x) = \lim\limits_{x \to a} h(x) = L,}$ then
+  $$
+    \lim_{x \to a} g(x) = L.
+  $$
 
 export default function MDXPage({ children }) {
     return <MdxLayout>{children}</MdxLayout>

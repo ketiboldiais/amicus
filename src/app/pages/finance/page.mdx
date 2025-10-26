@@ -12,7 +12,11 @@ import {TANGENT_LINE} from "@/components/Calculus"
   - [Government Bonds](#government-bonds)
     - [Treasury Bills](#treasury-bills)
     - [Treasury Notes](#treasury-notes)
+    - [Treasury Bonds](#treasury-bonds)
+    - [Treasury Inflation-Protected Securities (TIPS)](#treasury-inflation-protected-securities-tips)
+    - [U.S. Savings Bonds](#us-savings-bonds)
 - [Options Contracts](#options-contracts)
+- [The Federal Reserve](#the-federal-reserve)
 
 </TOC>
 
@@ -25,7 +29,7 @@ import {TANGENT_LINE} from "@/components/Calculus"
 - A __financial instrument__ is a legal contract that creates either a financial asset for one party and/or a financial liability for another. 
 - A __security__ is any financial instrument that can be bought, sold, or exchanged (i.e., traded). 
     - There are four types of securities:
-        1. Debt securities.
+        1. [Debt securities](#debt-securities).
         2. Equity securities.
         3. Derivative securities.
         4. Hybrid securities.
@@ -37,7 +41,12 @@ import {TANGENT_LINE} from "@/components/Calculus"
 - Debt securities are less risky than equity securities, since they guarantee repayment of principal and interest.
 - If the issuer goes bankrupt, debt security holders have priority over equity holders in asset distribution/sales. 
 - Common debt securities:
-  1. Government bonds
+  1. [Government bonds](#government-bonds)
+        1. [Treasury bills](#treasury-bills) 
+        2. [Treasury notes](#treasury-notes)
+        3. [Treasury bonds](#treasury-bonds)
+        4. [Treasury Inflation-Protected Securities (TIPS)](#treasury-inflation-protected-securities-tips)
+        5. [U.S. Savings bonds](#us-savings-bonds)
   2. Corporate bonds
   3. Municipal bonds
   4. Preferred stock
@@ -45,7 +54,7 @@ import {TANGENT_LINE} from "@/components/Calculus"
   6. Commercial papers
   7. Asset-backed securities
   8. Certificate of Deposits (CDs)
-  9. Collateralized Debt Obligations (CDOs)
+  9.  Collateralized Debt Obligations (CDOs)
   10. Collateralized Mortgage Obligations (CMOs)
   11. Mortgage-backed Securities (MBSs)
   12. Zero-coupon Securities.
@@ -74,7 +83,23 @@ import {TANGENT_LINE} from "@/components/Calculus"
 - A __treasury note__ (or __T-note__) is a U.S. government bond that:
     1. Comes in maturities of two, three, five, seven, and ten, and
     2. interest payouts occur every six months.
-- The interest payout from a T-note is subject to federal income tax, but exempt from state and local taxes.  
+- The interest payout from a T-note is subject to federal income tax, but exempt from state and local taxes.
+
+#### Treasury Bonds
+- A __treasury bond (T-bond)__ is a long-term, fixed interest debt security issued by the U.S. government with maturities of 20 or 30 years, with interest payments every six months.
+- Treasury bonds are stable, low-risk investments because of their (1) steady semiannual interest payments, and (2) backing by the U.S. government. 
+- Cons: They're subject to inflation and interest rate risks.
+
+#### Treasury Inflation-Protected Securities (TIPS)
+- These are [treasury bonds](#treasury-bonds) that adjust their principal value based on changes in inflation.
+
+#### U.S. Savings Bonds
+- U.S. savings bonds are a non-marketable debt security with a guaranteed, but modest, return. These bonds have the following characteristics:
+    1. __Non-marketable__. Savings bonds can only be purchased from the U.S. government. Once bought, they cannot be sold to anyone else.
+    2. __Purchase limited__. An investor cannot buy more than `$`${10\,000}$ face value of savings bonds in a calendar year.
+    3. __Interest payments limited__. Savings bonds accumulate interest; that interest, however, is paid out only after the bonds are redeemed or have matured.     
+    4. __Early redemption__. Maturities vary, but they are often between fifteen and thirty years. A bondholder must wait at least twelve months after the initial purchase before redeeming the savings bond, at which point they will receive the face value plus interest.
+    5. __Tax incentive__. Interest earned from U.S. savings bonds is subject to federal income tax, but not state or local taxes.  
 
 ## Options Contracts
 - long call
@@ -92,6 +117,19 @@ import {TANGENT_LINE} from "@/components/Calculus"
 - short iron butterfly
 - short iron condor
 
+## The Federal Reserve
+- In the old days, if one bank failed, a domino effect of failing banks occurred—people rushed to their own banks to withdraw funds. This caused widespread panic, sometimes leading to serious economic recessions. 
+- In response, Congress passed the Federal Reserve Act of 1913. This law's objectives:
+  1. Ensure banks could acquire emergency cash reserves to meet panic withdrawals. This ensured that the shortage of funds at one bank wouldn't disrupt the entire banking system.
+  2. Set the nation's monetary policy.
+- The Federal Reserve has three key components:
+    1. __The Board of Governors__. Consists of seven members, each appointed by the President and approved by the Senate. The Board—supported by its economists, attorneys, and staff—writes regulations to make commercial banks financially sound.  
+    2. __The Reserve Banks__. There are twelve federal reserve banks, each representing a federal reserve district. These banks have three key responsibilities:
+        1. Providing financial services.
+            - Everyday, banks deposit billions of dollars at their respective reserve bank in cash, checks, wire transfers, or some other form of electronic payment.
+        2. Contributing to monetary policy.
+        3. Supervising commercial banks.
+    3. __The Federal Open Market Committee (FOMC)__. Eight times a year, the Board's seven governors meet with the presidents of the twelve reserve banks to discuss the current state of the economy and how to (1) promote maximum employment and (2) stabilize prices. The voting members (the seven governors, the President of the Federal Reserve Bank of New York, and four other bank presidents who serve on a rotating basis) then vote on any actions that must be taken to stir the nation towards achieving these two objectives.    
 
 export default function MDXPage({ children }) {
     return <MdxLayout>{children}</MdxLayout>

@@ -10,12 +10,12 @@ export const law_links = [
 
 export const math_links = [
     { title: "Calculus", url: "/pages/calculus" },
-    // { title: "Probability", url: "/pages/probability" },
+    { title: "Probability", url: "/pages/probability" },
 ];
 
 
 export const cs_links = [
-    { title: "Theoretical CS: Languages", url: "/pages/cs-theory-languages" },
+    { title: "Tokenization", url: "/pages/rune/tokenization" },
     // { title: "Probability", url: "/pages/probability" },
 ];
 

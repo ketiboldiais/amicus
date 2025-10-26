@@ -20,19 +20,19 @@ export default function Home() {
               </li>
             ))}
           </ol>
-          <h2>CS Notes</h2>
-          <p>Most of my undergrad work focused on logic and mathematics—I spent a lot of time with computers. Below are some computer science (CS) related notes accumulated over the years.</p>
+          <h2>Law School Outlines</h2>
+          <p>These are the outlines I made during law school.</p>
           <ol>
-            {cs_links.map((entry) => (
+            {law_links.map((entry) => (
               <li key={entry.url}>
                 <Link href={entry.url}>{entry.title}</Link>
               </li>
             ))}
           </ol>
-          <h2>Law School Outlines</h2>
-          <p>These are the outlines I made during law school.</p>
+          <h2>Rune Blog</h2>
+          <p>Most of this website&apos;s diagrams and interactive graphics are built with <i>Rune</i>, a programming language I made for my notes. The series of blog posts below cover the language&apos;s design and implementation stages.</p>
           <ol>
-            {law_links.map((entry) => (
+            {cs_links.map((entry) => (
               <li key={entry.url}>
                 <Link href={entry.url}>{entry.title}</Link>
               </li>

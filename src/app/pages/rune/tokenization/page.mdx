@@ -1,0 +1,43 @@
+import MdxLayout from "@/components/mdx-layout";
+
+import {TANGENT_LINE} from "@/components/Calculus"
+
+# Tokenization
+
+<TOC>
+
+- [Introduction](#introduction)
+- [Tokens](#tokens)
+
+</TOC>
+
+## Introduction
+Before we begin implementing, we start with some definitions up front. First, the formal definition of a __symbol__: 
+
+> __*definition*__. A _symbol_, or a _token_, is an atomic unit that a machine can read and write.
+
+
+For example: ${1,}$ ${\pi,}$ ${\Sigma,}$ ${0,}$ ${x,}$ ${y,}$ ${f,}$ are all symbols. If your computer can highlight it with its cursor—that's almost certainly a symbol, or token. If we put these symbols in a box, we call that box an __alphabet__.  
+
+> __*definition*__. An _alphabet_ is a nonempty and finite set of symbols.
+
+A generic alphabet is often denoted with the Greek letter ${\Sigma.}$
+
+Since symbols are discrete things, we can distinguish between them, which allows us to place them in nice, clear sequences. We call such sequences __strings__.
+
+> __*definition*__. A _string_ over an alphabet is a sequence of symbols from that alphabet.
+
+A generic string is often denoted with the Greek letters ${\sigma}$ or ${\tau.}$ We use the Greek letter ${\varepsilon}$ to denote the empty string—a sequence of symbols of zero length.  The set of all strings over an alphabet ${\Sigma}$ is denoted ${\Sigma^{*}.}$
+
+If we take a bunch of strings and put them in a box, we get a __language__.
+
+> __*definition*__. A _language_ ${L}$ over an alphabet ${\Sigma}$ is a set of strings drawn from ${\Sigma.}$ That is, ${L \subseteq \Sigma^{*}.}$
+
+Keep in mind that this is what a language is from a computer science perspective—it's just a set of strings over a specified alphabet.
+
+## Tokens
+Now that we know what a token is, let's start by specifying the tokens we want our language, Rune, to recognize.
+
+export default function MDXPage({ children }) {
+    return <MdxLayout>{children}</MdxLayout>
+}

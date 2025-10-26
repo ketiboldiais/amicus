@@ -742,6 +742,10 @@ ol {
   list-style: decimal;
 }
 
+ol ol {
+  list-style: lower-alpha;
+}
+
 ul ul ul {
   list-style:square;
 }
