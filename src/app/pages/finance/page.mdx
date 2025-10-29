@@ -15,7 +15,10 @@ import {TANGENT_LINE} from "@/components/Calculus"
     - [Treasury Bonds](#treasury-bonds)
     - [Treasury Inflation-Protected Securities (TIPS)](#treasury-inflation-protected-securities-tips)
     - [U.S. Savings Bonds](#us-savings-bonds)
-- [Options Contracts](#options-contracts)
+- [Options](#options)
+  - [Pricing Options](#pricing-options)
+  - [Option Increments](#option-increments)
+  - [Covered Calls](#covered-calls)
 - [The Federal Reserve](#the-federal-reserve)
 
 </TOC>
@@ -101,21 +104,64 @@ import {TANGENT_LINE} from "@/components/Calculus"
     4. __Early redemption__. Maturities vary, but they are often between fifteen and thirty years. A bondholder must wait at least twelve months after the initial purchase before redeeming the savings bond, at which point they will receive the face value plus interest.
     5. __Tax incentive__. Interest earned from U.S. savings bonds is subject to federal income tax, but not state or local taxes.  
 
-## Options Contracts
-- long call
-- long put
-- covered call
-- cash secured put
-- long call spread
-- short put spread
-- short call spread
-- long put spread
-- long straddle
-- long strangle
-- long iron butterfly
-- long iron condor
-- short iron butterfly
-- short iron condor
+## Options
+> __*scenario*__. Suppose YELP's current share price is `$`${36.}$ Investor ${A}$ goes to ${B,}$ and says: "I'll make you a deal. For `$`${0.8,}$ I'll give you the option to buy shares of YELP at `$`${38}$ per share in the next ${30}$ days." Is this a good deal?
+>
+> __*response.*__ First, this type of deal is called a _call option_. The price of `$`${38}$ is called the _strike price_, and the price of ${\text{\textdollar}0.8}$ is called the _ask price_. Second, to the question: We don't know if the price of a YELP share will go up or down in the next ${30}$ days. 
+> 
+> _**Profit Case**_: If the price of a YELP share goes up to `$`${42}$ in the next ${30}$ days, then we're going to make profit: Buy at `$`${38}$ and immediately sell at ${\text{\textdollar}42.}$ That's a ${\text{\textdollar} 42 - \text{\textdollar}38 = \text{\textdollar} 4}$ gain. Recall that we paid ${\text{\textdollar}0.8}$ for the option, so our net profit is: ${\text{\textdollar}4 - \text{\textdollar}0.8 = \text{\textdollar}3.2.}$
+> 
+> _**Loss Case 1**_: The price goes down. Suppose the price of a YELP share goes down to ${\text{\textdollar}30.}$ Here, you don't exercise the option. Why would you buy shares at ${\text{\textdollar}38}$ when they're at ${\text{\textdollar}30}$? So, you're at a loss of ${-\text{\textdollar}0.8}$ per contract. 
+>
+> _**Loss Case 2**_: The price goes up, but not enough. Suppose the price of a YELP share goes up to ${\text{\textdollar}37.}$ Here, you don't exercise the option. Why would you buy shares at ${\text{\textdollar}38}$ when they're at ${\text{\textdollar}37}$? Again, you're at a loss of ${-\text{\textdollar}0.8}$ per contract.
+> 
+> _**Loss Case 3**_: Suppose the price of YELP goes up to ${\text{\textdollar} 38.50.}$ That's a gain of ${\text{\textdollar}38 - \text{\textdollar}38.5 = \text{\textdollar}0.5.}$ Here, however, we have a loss because of transaction costs. Recall that we paid ${\text{\textdollar}0.8}$ for the option: ${\text{\textdollar}0.5 - \text{\textdollar}0.8 = -\text{\textdollar}0.3.}$
+> 
+> _**Loss Case 4**_: The price of YELP goes up, but too slowly. Options have an expiration date. The price must go up within a certain amount of time. Otherwise, it expires and we're left with a loss of ${-\text{\textdollar}0.8.}$
+
+- Options are marketable—they can be bought and sold like any other financial instrument.
+- Many factors affect option pricing. Consider the following sample call options for YELP:
+
+<figure>
+
+| Strike                   | Ask                        |
+| ------------------------ | -------------------------- |
+| ${\text{\textdollar}39}$ | ${\text{\textdollar}0.55}$ |
+| ${\text{\textdollar}38}$ | ${\text{\textdollar}0.8}$  |
+| ${\text{\textdollar}37}$ | ${\text{\textdollar}1.15}$ |
+| ${\text{\textdollar}36}$ | ${\text{\textdollar}1.55}$ |
+| ${\text{\textdollar}35}$ | ${\text{\textdollar}2.25}$ |
+
+<figcaption>YELP</figcaption>
+</figure>
+
+### Pricing Options 
+- __Lower Strike, Higher Ask__. Notice that the lower the strike price, the higher the ask price. E.g., compare the strike price of ${\text{\textdollar}36}$ against the strike price of ${\text{\textdollar}35.}$ Their ask prices differ by ${\text{\textdollar}2.25 - \text{\textdollar}1.55 = \text{\textdollar}0.7.}$ This is because it's more likely that YELP's price hits ${\text{\textdollar}35}$ than ${\text{\textdollar}36.}$   
+- __More Time, Higher Ask__. In the example scenario, we assumed a time limit of ${30}$ days. Options can come in longer durations—say, ${1}$ year. In this case, the likelihood of reaching a higher stock price increases. And with an increased likelihood comes an increased ask price. Thus, we have the following general statements:
+  1. If the option's expiration date is sooner, then the option is cheaper.
+  2. If the option's expiration date is further, then the option is more expensive.
+
+### Option Increments
+<Warning/>
+
+- A very, very important point with options contracts: They are for ${100}$ shares.
+- Thus, if you buy ${1}$ options contract of YELP at a ${\text{\textdollar}38}$ strike price, then you're buying the option to buy ${100}$ shares of YELP at ${\text{\textdollar}38.}$
+- When the dealer says the ask price is ${\text{\textdollar}0.8,}$ it's ${\text{\textdollar}0.8}$ per share. Since the option comes in ${100}$ shares, one contract is ${100 \times \text{\textdollar}0.8 = \text{\textdollar}80.}$ Thus, if we're buying ${100}$ YELP calls, that's a ${100 \times \text{\textdollar}80 = \text{\textdollar}8\,000}$ purchase. 
+
+### Covered Calls
+> __*scenario*__. Suppose INTC (Intel Corp. stock) is priced at ${\text{\textdollar}32}$ ${A}$ buys INTC shares at this price. ${A}$ then goes to buyer ${B}$ and says: "For ${\text{\textdollar}1.5}$ per share, I'll give you the option to buy INTC at ${\text{\textdollar}34}$ within the next two months." What are the possible profit/loss outcomes for ${A?}$ 
+>
+> __*response*__. This is a call option with a strike price of ${\text{\textdollar}34}$ and an ask price of ${\text{\textdollar}1.5.}$ There are four scenarios for ${A:}$
+>
+> _**Scenario 1: The INTC share price goes down within the next two months.**_ Suppose it goes down to ${\text{\textdollar}30.}$ Then ${B}$ wouldn't buy the shares from ${A}$ for ${\text{\textdollar}34,}$ since the market has them at ${\text{\textdollar}30.}$  The seller loses ${30 - 32 = -\text{\textdollar}2}$ per share. But, the seller makes ${\text{\textdollar}1.5}$ by selling the call option. So, they're at a loss of ${-\text{\textdollar}2 + \text{\textdollar}1.5 = -\text{\textdollar}0.5.}$ 
+>
+> _**Scenario 2: The INTC share price does nothing within the next two months.**_ ${A}$ bought INTC shares at ${\text{\textdollar}32.}$ After ${2}$ months, the price is still at ${\text{\textdollar}32.}$ ${A,}$ however, profits, since ${A}$ sold ${B}$ an option at ${\text{\textdollar}1.5.}$ This is a great return. Specifically, a return of ${\text{\textdollar}1.5 / \text{\textdollar}32 = 0.0468 = 4.68\%}$ in ${2}$ months. If we annualize this, we have: ${(12 \, \text{mo} / 2) \times 4.68\% = 28\%}$ annually.
+>
+> _**Scenario 3: The INTC share price goes up a small amount.**_ ${A}$ bought the INTC shares at ${\text{\textdollar}32.}$ The INTC share price goes up to ${\text{\textdollar}33.}$ Thus, ${A}$ sees a gain of ${\text{\textdollar}33 - \text{\textdollar}32 = \text{\textdollar}1.}$ ${A}$ also sold ${B}$ the call option to buy INTC shares at ${\text{\textdollar}34.}$ ${B,}$ however, doesn't exercise the option since the market has them at ${\text{\textdollar}33.}$ So, ${A}$ sees a ${\text{\textdollar}1}$ gain from each share they bought, and a ${\text{\textdollar}1.5}$ gain from each call option they sold. That's a ${\text{\textdollar}1 + \text{\textdollar}1.5 = \text{\textdollar}2.5}$ gain in ${2}$ months. Which, in turn, is a ${\text{\textdollar}2.5 / \text{\textdollar}32 = 7.8 \%}$ gain in ${2}$ months. Annually, that's a rate of return of ${46.8\%.}$
+>
+> _**Scenario 4: The INTC share prices goes up a significant amount.**_ ${A}$ bought the INTC shares at ${\text{\textdollar}32.}$ The INTC share price shoots up to ${\text{\textdollar}40.}$ ${B,}$ clearly, will want to exercise their option to buy the INTC shares at ${\text{\textdollar}34}$. But, ${A}$ will still see a again. Since ${A}$ bought shares at ${\text{\textdollar}32}$ and sells them at ${34,}$ ${A}$ sees a gain of ${\text{\textdollar}34 - \text{\textdollar}32 = \text{\textdollar}2}$ per share. On top of that, ${A}$ sees a gain from selling the option at ${\text{\textdollar}1.5.}$ Hence, ${A}$ sees a net gain of ${\text{\textdollar}2 + \text{\textdollar}1.5 = \text{\textdollar}3.5.}$ 
+
+
 
 ## The Federal Reserve
 - In the old days, if one bank failed, a domino effect of failing banks occurred—people rushed to their own banks to withdraw funds. This caused widespread panic, sometimes leading to serious economic recessions. 

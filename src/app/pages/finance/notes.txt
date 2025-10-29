@@ -1,0 +1,14 @@
+- long call
+- long put
+- covered call
+- cash secured put
+- long call spread
+- short put spread
+- short call spread
+- long put spread
+- long straddle
+- long strangle
+- long iron butterfly
+- long iron condor
+- short iron butterfly
+- short iron condor

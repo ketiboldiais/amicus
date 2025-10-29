@@ -1,6 +1,6 @@
 import MdxLayout from "@/components/mdx-layout";
 
-import {TANGENT_LINE} from "@/components/Calculus"
+import {TANGENT_LINE, SQUEEZE_THEOREM} from "@/components/Calculus"
 
 # Calculus
 
@@ -24,6 +24,7 @@ import {TANGENT_LINE} from "@/components/Calculus"
     - [Direct Substitution Property](#direct-substitution-property)
     - [Limit Inequality Theorem](#limit-inequality-theorem)
     - [The Squeeze Theorem](#the-squeeze-theorem)
+- [Continuity](#continuity)
 
 
 </TOC>
@@ -173,6 +174,15 @@ where ${n}$ is a positive integer. If ${n}$ is even, we assume ${a \gt 0.}$
 - If ${f(x) \leq g(x) \leq h(x)}$ when ${x}$ is near ${a}$ (except possibly at ${a}$) and ${\lim\limits_{x \to a} f(x) = \lim\limits_{x \to a} h(x) = L,}$ then
   $$
     \lim_{x \to a} g(x) = L.
+  $$
+- __*illustration*__. Below, the curve ${g}$ runs between ${f}$ and ${h.}$
+  <SQUEEZE_THEOREM/>
+- The Squeeze Theorem is also called the _Sandwich Theorem_ or the _Pinching Theorem_.
+
+## Continuity
+- __*definition*__. A function ${f}$ is continous at a number ${a}$ if
+  $$
+    \lim_{x \to a} f(x) = f(a).
   $$
 
 export default function MDXPage({ children }) {
