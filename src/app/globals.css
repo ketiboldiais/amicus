@@ -760,3 +760,20 @@ ol ol {
 ul ul ul {
   list-style:square;
 }
+
+div.checklist ul {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+div.checklist li {
+  padding-left: 1em;
+  text-indent: -1em;
+}
+
+div.checklist li:before {
+  content: "▢";
+  padding-right: 5px;
+  font-size: 0.7rem;
+}

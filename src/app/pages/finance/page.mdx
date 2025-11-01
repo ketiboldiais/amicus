@@ -19,6 +19,10 @@ import {TANGENT_LINE} from "@/components/Calculus"
   - [Pricing Options](#pricing-options)
   - [Option Increments](#option-increments)
   - [Covered Calls](#covered-calls)
+    - [Covered Calls Variables](#covered-calls-variables)
+      - [Covered Call Duration](#covered-call-duration)
+      - [Covered Call Strike Price](#covered-call-strike-price)
+      - [Writing Covered Calls](#writing-covered-calls)
 - [The Federal Reserve](#the-federal-reserve)
 
 </TOC>
@@ -161,7 +165,27 @@ import {TANGENT_LINE} from "@/components/Calculus"
 >
 > _**Scenario 4: The INTC share prices goes up a significant amount.**_ ${A}$ bought the INTC shares at ${\text{\textdollar}32.}$ The INTC share price shoots up to ${\text{\textdollar}40.}$ ${B,}$ clearly, will want to exercise their option to buy the INTC shares at ${\text{\textdollar}34}$. But, ${A}$ will still see a again. Since ${A}$ bought shares at ${\text{\textdollar}32}$ and sells them at ${34,}$ ${A}$ sees a gain of ${\text{\textdollar}34 - \text{\textdollar}32 = \text{\textdollar}2}$ per share. On top of that, ${A}$ sees a gain from selling the option at ${\text{\textdollar}1.5.}$ Hence, ${A}$ sees a net gain of ${\text{\textdollar}2 + \text{\textdollar}1.5 = \text{\textdollar}3.5.}$ 
 
+#### Covered Calls Variables
+- There are two variables that greatly impact any risk assessment for covered calls: _duration_ and _strike price_.
 
+##### Covered Call Duration
+- The more time a call option has, the more time the call option will be. And the more expensive the call option is, the more money you collect as a seller.
+- The price of a call option with a duration of ${6}$ months will be higher than the price of a call option with a duration of ${2}$ months.
+> __*example*__. A ${6}$-months duration INTC call option for a ${\text{\textdollar}34}$ strike price has an ask price of ${\text{\textdollar}2.6.}$ A ${2}$-months INTC call option for the same strike price (${\text{\textdollar}34}$) has an ask price of ${\text{\textdollar}1.5.}$
+> 
+> It seems as if the ${\text{\textdollar}1.5}$ ask price option is a better deal. The call option spans ${2}$ months. So, if we bought that call option every ${2}$ months for a total of ${6}$ months, we'd have ${\text{\textdollar}1.5 + \text{\textdollar}1.5 + \text{\textdollar}1.5 = \text{\textdollar}4.5.}$ This is more gain than ${\text{\textdollar}4.5.}$
+> 
+> Alas: This is true only if the price for the ${2}$-months call option always stays the same. And that almost certainly isn't the case. The price of a call option varies with its associated share price. It could very easily reduce in price by as much as ${\text{\textdollar}0.5,}$ or worse, a whole dollar. 
+> 
+> The benefit of the ${6}$-months call option: We're guaranteed the ask price of ${\text{\textdollar}2.6}$ for ${6}$ months. 
+
+##### Covered Call Strike Price
+- The closer the strike price is to the current price, the more expensive the call option.
+- The farther the strike price, the cheaper the call option.
+
+##### Writing Covered Calls
+- __First, buy the stock__. Remember, you're dealing with ${100}$ share increments. So, you have to buy ${100}$ shares first.
+- __Second, sell the call option.__
 
 ## The Federal Reserve
 - In the old days, if one bank failed, a domino effect of failing banks occurred—people rushed to their own banks to withdraw funds. This caused widespread panic, sometimes leading to serious economic recessions. 
