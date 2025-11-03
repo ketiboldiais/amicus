@@ -8,6 +8,7 @@ import {TANGENT_LINE} from "@/components/Calculus"
 
 - [Economics](#economics)
 - [Common Terms](#common-terms)
+  - [Financing Decisions](#financing-decisions)
 - [Debt Securities](#debt-securities)
   - [Government Bonds](#government-bonds)
     - [Treasury Bills](#treasury-bills)
@@ -24,6 +25,10 @@ import {TANGENT_LINE} from "@/components/Calculus"
       - [Covered Call Strike Price](#covered-call-strike-price)
       - [Writing Covered Calls](#writing-covered-calls)
 - [The Federal Reserve](#the-federal-reserve)
+- [Value Investing](#value-investing)
+  - [Market Volatility](#market-volatility)
+  - [Share Mispricing](#share-mispricing)
+  - [Functions of Security Analysis](#functions-of-security-analysis)
 
 </TOC>
 
@@ -40,6 +45,20 @@ import {TANGENT_LINE} from "@/components/Calculus"
         2. Equity securities.
         3. Derivative securities.
         4. Hybrid securities.
+- A __capital expenditure (CAPEX)__ is money a company spends to acquire, upgrade, or maintain long-term physical assets like property, buildings, and equipment.
+- __Market capitalization (market cap)__ is the most recent market value of a company's outstanding shares:
+    $$
+        \text{M}_{\text{cap}} = \text{S}_p \times n_{\text{S}} 
+    $$
+    where ${\text{M}_{\text{cap}}}$ is the market cap, ${S_p}$ is the current share price, and ${n_S}$ is the number of shares outstanding.
+- Shareholders want managers to maximize market value.
+- Thus, managers have a natural financial objective: Increase the current market value of the company's shares. 
+
+### Financing Decisions
+- A corporation has two ways to raise money:
+    1. __Lenders__. Corporation ${A}$ asks for an amount of money ${x}$ from ${B.}$ ${A}$ promises to pay back ${x}$ to ${B}$ by a certain date, along with periodic interest payments along the way, according to some fixed rate. This approach is called __debt financing__.    
+    2. __Shareholders__. Corporation ${A}$ sells a _share_ of the corporation to ${B,}$ which ${B}$ may or may not sell. If ${B}$ holds on to the share, and ${A}$ decides to pay out dividends, then ${B}$ receives a fraction of the dividends according to their share. This approach is called __equity financing__.   
+- A __capital structure decision__ is a corporation's decision in whether to use lenders (debt) or shareholders (equity) to raise money.  
 
 ## Debt Securities
 - A __debt security__ is a security where (i) one party lends money (the lender or investor) and another borrows (the borrower or issuer), and (ii) the borrower must repay the principal and interest (at the lender's rate) by a given date (called the maturity date). 
@@ -200,6 +219,32 @@ import {TANGENT_LINE} from "@/components/Calculus"
         2. Contributing to monetary policy.
         3. Supervising commercial banks.
     3. __The Federal Open Market Committee (FOMC)__. Eight times a year, the Board's seven governors meet with the presidents of the twelve reserve banks to discuss the current state of the economy and how to (1) promote maximum employment and (2) stabilize prices. The voting members (the seven governors, the President of the Federal Reserve Bank of New York, and four other bank presidents who serve on a rotating basis) then vote on any actions that must be taken to stir the nation towards achieving these two objectives.    
+
+## Value Investing
+- __Value investing__ is the practice of purchasing securities or assets for less than they are worth: buying a dollar for 50 cents.
+
+### Market Volatility
+- Over the long run, share prices tend to gravitate toward the value of the underlying business.
+- Share prices, day-to-day, hold no particular informational value—they are driven by supply and demand and fueled by buyer and seller emotions.
+- Volatility highlights an investing hurdle: Despite a spot-on analysis of a company and its value, the stock market can appear to refute it.
+- Investors must be resolute in the face of withering criticism from clients and superiors and their own self-doubt during protracted periods of underperformance.
+- Value investors should plan to completely exit a security by the time it reaches its full value; owning overvalued securities and hoping they appreciate further is a game for speculators.
+- In General: value investors should typically begin selling at a 10% to 20% discount to their assessment of a security’s underlying value.
+
+### Share Mispricing
+- Many factors cause share mispricing:
+  - __Recent performance.__ A recent, poor earnings reports or credit ratings tend to cause people to start selling. A recent, great earnings reports or credit ratings tend to cause people to start buying.
+  - __Herd mentality.__ A person tends to start selling when all their friends start selling; likewise, they tend to start buying when all their friends start buying.
+  - __Momentum hypnosis.__ People see an upward trend, and want to "ride the wave," so they buy more and more, even at high prices. Others see a downward trend, so they succumb to fear and start selling, even at much lower prices.
+  - __Diamond hands.__ People tend to anchor to the price they paid for an investment and stubbornly hold onto the investment when it runs into trouble, irrationally waiting for it to return to the price they paid for it to get out without a loss.   
+  - __Risk trauma.__ After a financial loss, people often beomce more risk-averse, missing out on the next fat pitch. 
+  - __Poor estimation.__ People tend to overestimate the future likelihood of events they recently experienced, and underestimate the likelihood of events that haven't lately occurred. 
+
+### Functions of Security Analysis
+- There are three functions of security analysis.
+  1. __Selective function__ — to determine whether a given issue should be bought, sold, retained, or exchanged for some other. 
+  2. __Descriptive function__ —
+  3. __Critical function__ —
 
 export default function MDXPage({ children }) {
     return <MdxLayout>{children}</MdxLayout>

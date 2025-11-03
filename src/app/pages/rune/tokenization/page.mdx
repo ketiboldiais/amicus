@@ -38,6 +38,11 @@ Keep in mind that this is what a language is from a computer science perspective
 ## Tokens
 Now that we know what a token is, let's start by specifying the tokens we want our language, Rune, to recognize.
 
+We make a distinction between _tokens_ and _token types_. The digits ${1,}$ ${2,}$ ${3,}$ and so on, are all _tokens_. We could read each of these tokens one at a time, but it's clear that certain sequences of tokens (_strings_) are always going to be interpreter the same way. For example, the string ${1393}$ is always an _integer_. Likewise, the string `"while"` is always the keyword `"while"`, which we interpret as marking an iteration procedure.  
+
+Below are all the token types Rune recognizes. Within Rune's source code, these are implemented with a TypeScript enum.
+
+
 export default function MDXPage({ children }) {
     return <MdxLayout>{children}</MdxLayout>
 }
