@@ -8,7 +8,11 @@ import {TANGENT_LINE} from "@/components/Calculus"
 
 - [Economics](#economics)
 - [Common Terms](#common-terms)
-  - [Financing Decisions](#financing-decisions)
+  - [Corporate Financing Decisions](#corporate-financing-decisions)
+    - [Hurdle Rate](#hurdle-rate)
+- [Compound Interest](#compound-interest)
+  - [Determining Present Value](#determining-present-value)
+  - [Net Present Value](#net-present-value)
 - [Debt Securities](#debt-securities)
   - [Government Bonds](#government-bonds)
     - [Treasury Bills](#treasury-bills)
@@ -52,13 +56,59 @@ import {TANGENT_LINE} from "@/components/Calculus"
     $$
     where ${\text{M}_{\text{cap}}}$ is the market cap, ${S_p}$ is the current share price, and ${n_S}$ is the number of shares outstanding.
 - Shareholders want managers to maximize market value.
-- Thus, managers have a natural financial objective: Increase the current market value of the company's shares. 
+- Thus, managers have a natural financial objective: Increase the market value of the company's shares. 
 
-### Financing Decisions
+### Corporate Financing Decisions
 - A corporation has two ways to raise money:
     1. __Lenders__. Corporation ${A}$ asks for an amount of money ${x}$ from ${B.}$ ${A}$ promises to pay back ${x}$ to ${B}$ by a certain date, along with periodic interest payments along the way, according to some fixed rate. This approach is called __debt financing__.    
     2. __Shareholders__. Corporation ${A}$ sells a _share_ of the corporation to ${B,}$ which ${B}$ may or may not sell. If ${B}$ holds on to the share, and ${A}$ decides to pay out dividends, then ${B}$ receives a fraction of the dividends according to their share. This approach is called __equity financing__.   
 - A __capital structure decision__ is a corporation's decision in whether to use lenders (debt) or shareholders (equity) to raise money.  
+
+#### Hurdle Rate
+> _**Scenario**_. Suppose a corporation ${C}$ receives cash. Then ${C}$ has two choices: (a) invest the cash into a project, or (b) pay out dividends to its shareholders.
+> If ${C}$ pays out dividends, then the shareholders can use that money to invest in their own projects for themselves. What should the financial manager do?
+>
+> _**Answer**_.  Compare (1) the project's rate of return and (2) the rate of return that the shareholders can earn by investing in financial markets. If (1) has a higher rate of return, then the corporation should go with choice (a). Otherwise, it should go with choice (b).  
+
+- __*example.*__ Tesla receives a profit of ${\text{\textdollar}150\text{m}}$ in cash. Tesla also has a new electric car project. Should Tesla invest the ${\text{\textdollar}150\text{m}}$ into the new car project or should it pay out dividends? Tesla will start by looking at what its rate of return is for the new project. Suppose Tesla expects a ${20\%}$ rate of return. With that in mind, Tesla considers the rate of a return from investing in the U.S. stock market. Tesla determines that investing in the stock market offers a ${10\%}$ rate of return. Because the project offers a superior rate of return, it invests the ${\text{\textdollar}150\text{m}}$ in the new project.
+- The rate of return from investment in the stock market is called the __opportunity cost of capital__ or the __hurdle rate__.  
+
+## Compound Interest
+Where ${r}$ is the interate rate, ${t}$ is amount of time in years, and ${\text{V}_{\text{p}}}$ is the present value, the future value ${\text{V}_{\text{f}}}$ is given by: 
+    $$
+        \text{V}_{\text{f}} = \text{V}_{\text{p}} (1 + r)^t.
+    $$
+
+### Determining Present Value
+- Suppose we want to have ${x}$ amount of dollars at the end of ${t}$ years. How much do we have to invest today to get ${x}$?
+  - Assuming we have a rate of return ${r,}$ we must invest—today—an amount ${p,}$ where ${p}$ is given by: 
+    $$
+        p = \dfrac{x}{(1 + r)^t}.
+    $$
+- I.e., we can determine the present value ${\text{V}_{\text{p}}}$ of a future value ${\text{V}_{\text{f}},}$ given interest ${r}$ over time ${t,}$ with the formula:
+  $$
+    \text{V}_{\text{p}} = \dfrac{\text{V}_{\text{f}}}{(1 + r)^t.}
+  $$ 
+
+### Net Present Value
+> _**Scenario**_. Corporation ${C}$ wants to build an office building. The project will cost ${\text{\textdollar}700\,000.}$ ${C}$ predicts they can sell the building next year for ${\text{\textdollar}800\,000.}$ How much is the investment worth?
+>
+> _**Response**_. Suppose the shareholders can earn a ${7\%}$ profit by investing for one year in safe assets (e.g., U.S. Treasury debt securities). Then the hurdle rate is ${7\%.}$
+> The project will produce ${\text{\textdollar}800\,000}$ at the end of the year. So, we need the present value of that cash flow. The rate ${r,}$ in this case, is the hurdle rate:
+> $$
+>    \text{V}_{\text{p}} = \dfrac{\text{\textdollar}800\,000}{(1 + 0.07)^1} = \text{\textdollar}747\,664.
+> $$
+
+- From the scenario above, the office building is worth ${\text{\textdollar}747\,664}$ today. 
+- The value added to the shareholder's wealth is the __net present value__:
+    $$
+        \text{NPV} = \text{V}_{\text{p}} - \text{I}
+    $$
+    where ${\text{I}}$ is the required investment.
+- Hence, from our scenario:
+    $$
+        \text{NPV} = \text{\textdollar}747\,664 - \text{\textdollar}700\,000 = \text{\textdollar}47\,664.
+    $$
 
 ## Debt Securities
 - A __debt security__ is a security where (i) one party lends money (the lender or investor) and another borrows (the borrower or issuer), and (ii) the borrower must repay the principal and interest (at the lender's rate) by a given date (called the maturity date). 

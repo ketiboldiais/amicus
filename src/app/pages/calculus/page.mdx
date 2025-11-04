@@ -25,6 +25,7 @@ import {TANGENT_LINE, SQUEEZE_THEOREM} from "@/components/Calculus"
     - [Limit Inequality Theorem](#limit-inequality-theorem)
     - [The Squeeze Theorem](#the-squeeze-theorem)
 - [Continuity](#continuity)
+  - [Discontinuity](#discontinuity)
 
 
 </TOC>
@@ -184,6 +185,15 @@ where ${n}$ is a positive integer. If ${n}$ is even, we assume ${a \gt 0.}$
   $$
     \lim_{x \to a} f(x) = f(a).
   $$
+- From this definition, we have the following checklist for continuity at a point:
+  <Checklist> 
+    - ${a}$ is in the domain of ${f}$ (i.e, ${f(a)}$ is defined).
+    - ${\lim\limits_{x \to a} f(x)}$ exists.
+    - ${\lim\limits_{x \to a} f(x) = f(a).}$
+  </Checklist> 
+
+### Discontinuity
+- If ${f}$ is not continous at ${a,}$ we say that ${f}$ is __discontinuous__ at ${a.}$
 
 export default function MDXPage({ children }) {
     return <MdxLayout>{children}</MdxLayout>
