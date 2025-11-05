@@ -30,6 +30,7 @@ import MdxLayout from "@/components/mdx-layout";
 - [Venue](#venue)
   - [28 U.S.C. § 1391](#28-usc--1391)
   - [Residence in Venue](#residence-in-venue)
+  - [Challenging Venue](#challenging-venue)
 
 </TOC>
 
@@ -223,10 +224,10 @@ __*comment*__. Supplemental jurisdiction allows litigants to resolve all aspects
 - Federal venue is determined by 28 U.S.C. § 1391.
 - Federal venue is determined by district.
 - A federal district has proper venue if any of the following conditions are true:
-
-  <Checklist>
-
-  - If all the defendants [reside](#residence-in-venue) in the federal district's state—at least one of the defendants resides in the federal district.[^1391_b_1]  
+  - If—and only if—all the defendants [reside](#residence-in-venue) in the federal district's state—at least one of the defendants resides in the federal district.[^1391_b_1]  
+    - __*note*__. This means that if at least one defendant lives in a different state, then this rule doesn't apply. 
+    > __*example*__. ${P}$ sues ${D_1,}$ ${D_2,}$ ${D_3,}$ and ${D_4.}$ ${D_1}$ and ${D_2}$ live in the Southern District of California. ${D_3}$ lives in the Northern District of California. ${D_4}$ lives in the Eastern District of California. The Northern, Southern, and Eastern Districts of California are all proper venues, but not the Central District.
+    
   [^1391_b_1]: 28 U.S.C. § 1391(b)(1).
   - A substantial part of the events or omissions giving rise to the claim occurred in the federal district.[^1391_b_2]
   [^1391_b_2]: 28 U.S.C. § 1391(b)(2).
@@ -235,11 +236,15 @@ __*comment*__. Supplemental jurisdiction allows litigants to resolve all aspects
   - If no venue is available under 28 U.S.C. § 1391(b)(1) or (b)(2) (the preceding conditions)—the federal district has proper venue if it has personal jurisdiction over at least one of the defendants.[^1391_b_3]
   [^1391_b_3]: 28 U.S.C. § 1391(b)(3).
 
-  </Checklist>
+  
 
 - If there are multiple districts with proper venue, then the plaintiff is free to choose which of these districts to file suit in (provided that district has jurisdiction).
 
 ### Residence in Venue
+- A person is deemed to reside in the district where she has her domicile.[^1391_b_1_domicile] 
+[^1391_b_1_domicile]: 28 U.S.C. § 1391(b)(1).
+
+### Challenging Venue
 
 export default function MDXPage({ children }) {
     return <MdxLayout>{children}</MdxLayout>

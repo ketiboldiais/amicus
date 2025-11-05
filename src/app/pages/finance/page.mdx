@@ -9,6 +9,7 @@ import {TANGENT_LINE} from "@/components/Calculus"
 - [Economics](#economics)
 - [Common Terms](#common-terms)
   - [Corporate Financing Decisions](#corporate-financing-decisions)
+  - [Securities Risks](#securities-risks)
     - [Hurdle Rate](#hurdle-rate)
 - [Compound Interest](#compound-interest)
   - [Determining Present Value](#determining-present-value)
@@ -20,6 +21,7 @@ import {TANGENT_LINE} from "@/components/Calculus"
     - [Treasury Bonds](#treasury-bonds)
     - [Treasury Inflation-Protected Securities (TIPS)](#treasury-inflation-protected-securities-tips)
     - [U.S. Savings Bonds](#us-savings-bonds)
+- [Valuing Bonds](#valuing-bonds)
 - [Options](#options)
   - [Pricing Options](#pricing-options)
   - [Option Increments](#option-increments)
@@ -63,6 +65,19 @@ import {TANGENT_LINE} from "@/components/Calculus"
     1. __Lenders__. Corporation ${A}$ asks for an amount of money ${x}$ from ${B.}$ ${A}$ promises to pay back ${x}$ to ${B}$ by a certain date, along with periodic interest payments along the way, according to some fixed rate. This approach is called __debt financing__.    
     2. __Shareholders__. Corporation ${A}$ sells a _share_ of the corporation to ${B,}$ which ${B}$ may or may not sell. If ${B}$ holds on to the share, and ${A}$ decides to pay out dividends, then ${B}$ receives a fraction of the dividends according to their share. This approach is called __equity financing__.   
 - A __capital structure decision__ is a corporation's decision in whether to use lenders (debt) or shareholders (equity) to raise money.  
+
+### Securities Risks
+- __Nominal risk-free rate__. Denoted ${\text{NR}_\text{f},}$ The rate of return on a risk-free investment without adjusting for inflation.
+- __Real risk-free rate__. Denoted ${\text{RR}_\text{f},}$ the rate of return on an investment with zero risk and zero inflation.
+- We can compute these rates with the following formulas.
+    - __Nominal Risk-free Rate Formula__. Where ${\text{NR}_\text{f}}$ is the nominal risk-free rate, ${\text{RR}_\text{f}}$ is the real risk-free rate, and ${\text{R}_\text{I}}$ is the rate of inflation:
+        $$
+            \text{NR}_\text{f} = (1 + \text{RR}_\text{f})(1 + \text{R}_\text{I}) - 1.
+        $$
+- There are three types of risks associated with securities:
+    1. __Default risk__ - The risk that a borrower won't make the promises in a timely manner.
+    2. __Liquidity risk__ - Suppose the investment must be sold for cash quickly (e.g., the borrower defaults). This is the risk of selling the investment for less than its fair market value. 
+    3. __Maturity risk__ - The risk of interest rates changing because of how long it will take for the investment to mature.
 
 #### Hurdle Rate
 > _**Scenario**_. Suppose a corporation ${C}$ receives cash. Then ${C}$ has two choices: (a) invest the cash into a project, or (b) pay out dividends to its shareholders.
@@ -176,6 +191,9 @@ Where ${r}$ is the interate rate, ${t}$ is amount of time in years, and ${\text{
     3. __Interest payments limited__. Savings bonds accumulate interest; that interest, however, is paid out only after the bonds are redeemed or have matured.     
     4. __Early redemption__. Maturities vary, but they are often between fifteen and thirty years. A bondholder must wait at least twelve months after the initial purchase before redeeming the savings bond, at which point they will receive the face value plus interest.
     5. __Tax incentive__. Interest earned from U.S. savings bonds is subject to federal income tax, but not state or local taxes.  
+
+## Valuing Bonds
+- 
 
 ## Options
 > __*scenario*__. Suppose YELP's current share price is `$`${36.}$ Investor ${A}$ goes to ${B,}$ and says: "I'll make you a deal. For `$`${0.8,}$ I'll give you the option to buy shares of YELP at `$`${38}$ per share in the next ${30}$ days." Is this a good deal?
