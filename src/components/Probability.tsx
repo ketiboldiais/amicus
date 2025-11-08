@@ -2,6 +2,7 @@ import sample_space_1 from "../../public/diagrams/sample_space_1.svg"
 import tetrahedral_roll_1 from "../../public/diagrams/tetrahedral_roll_1.svg";
 import tetrahedral_tree from "../../public/diagrams/tetrahedral_tree.svg";
 import rectangle_target from "../../public/diagrams/rectangle_target.svg";
+import partition_1 from "../../public/diagrams/partition_1.svg";
 import { Img } from "@/components/Img";
 
 export const SAMPLE_SPACE_1 = () => (
@@ -38,4 +39,9 @@ export const TETRAHEDRAL_TREE = () => (
 
 export const RECTANGLE_TARGET = () => (
   <Img width={130} url={rectangle_target} alt="Square target." />
+); 
+
+
+export const PARTITION_1 = () => (
+  <Img width={120} url={partition_1} alt="Partitioned sample space." />
 ); 

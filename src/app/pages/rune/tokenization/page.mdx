@@ -8,6 +8,10 @@ import {TANGENT_LINE} from "@/components/Calculus"
 
 - [Introduction](#introduction)
 - [Tokens](#tokens)
+  - [Utility Token Types](#utility-token-types)
+  - [Paired Delimiters](#paired-delimiters)
+  - [Unary Delimiters](#unary-delimiters)
+  - [Algebraic Operators](#algebraic-operators)
 
 </TOC>
 
@@ -41,6 +45,40 @@ Now that we know what a token is, let's start by specifying the tokens we want o
 We make a distinction between _tokens_ and _token types_. The digits ${1,}$ ${2,}$ ${3,}$ and so on, are all _tokens_. We could read each of these tokens one at a time, but it's clear that certain sequences of tokens (_strings_) are always going to be interpreter the same way. For example, the string ${1393}$ is always an _integer_. Likewise, the string `"while"` is always the keyword `"while"`, which we interpret as marking an iteration procedure.  
 
 Below are all the token types Rune recognizes. Within Rune's source code, these are implemented with a TypeScript enum.
+
+### Utility Token Types
+The following token types are used as flags. When encountered during tokenization or parsing, they tell us that something went wrong, and we should halt all further work. 
+
+| Token Type | Lexeme              | Flag                                    |
+| ---------- | ------------------- | --------------------------------------- |
+| `end`      | `""` (empty string) | End of source code reached.             |
+| `error`    | `""` (empty string) | A scanning error occurred.              |
+| `empty`    | `""` (empty string) | The empty token, used as a placeholder. |
+
+### Paired Delimiters
+These are token types that always come in pairs. For example, the opening parenthesis `"("` and its counterpart, the closing `")"`. If our tokenizer or parser encounters one of these tokens, then we should expect to see its other half.  
+
+| Token Type      | Lexeme |
+| --------------- | ------ |
+| `left_paren`    | `"("`  |
+| `right_paren`   | `")"`  |
+| `left_brace`    | `"{"`  |
+| `right_brace`   | `"}"`  |
+| `left_bracket`  | `"["`  |
+| `right_bracket` | `"]"`  |
+
+### Unary Delimiters
+Unary delimiters are single, stand-alone token types. They are akin to punctuation—signals that something else follows or precedes, chopping up long token streams into bite-sized, easier-to-digest chunks.
+
+| Token Type  | Lexeme |
+| ----------- | ------ |
+| `semicolon` | `";"`  |
+| `colon`     | `":"`  |
+| `dot`       | `"."`  |
+| `comma`     | `","`  |
+
+### Algebraic Operators
+These token types correspond signify algebraic operations. 
 
 
 export default function MDXPage({ children }) {

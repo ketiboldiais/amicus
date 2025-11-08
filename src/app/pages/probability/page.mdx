@@ -4,6 +4,7 @@ import {
   TETRAHEDRAL_ROLL_1,
   TETRAHEDRAL_TREE,
   RECTANGLE_TARGET,
+  PARTITION_1,
 } from "@/components/Probability";
 
 
@@ -39,6 +40,29 @@ import {
   <RECTANGLE_TARGET/>
   - In set notation: ${\{(x,y) \in \reals^2 : 0 \leq xy \leq 1\}}$
 
+### Events
+- An __event__ is a subset of the sample space.
+- We assign probabilities to _events_, not _outcomes_.
+
+## The Probability Axioms
+- Let ${A}$ and ${B}$ be events of some space ${\Omega.}$
+  1. __*axiom i*__. Given an event ${E \subseteq \Omega,}$ ${\text{P}(E) \leq 0.}$
+      - I.e., probabilities are never negative. This is also called the _Nonnegativity Axiom_. 
+  2. __*axiom ii*__. ${\text{P}(\Omega) = 1.}$
+      - I.e., the probability of the sample space is ${1.}$ This is also called the _Normalization Axiom_.
+  3. __*axiom iii*__. If ${A \cap B = \varnothing,}$ then ${\text{P}(A \cup B) = \text{P}(A) + \text{P}(B).}$
+      - The notation ${A \cap B = \varnothing}$ means ${A}$ and ${B}$ are disjoint—the sets ${A}$ and ${B}$ have no elements in common. In probability terms, this means that ${A}$ and ${B}$ are _disjoint events_ — they cannot both occur.
+
+## Probability Maximum Lemma
+- Given an event ${E,}$ it follows that ${\text{P}(E) \leq 1.}$
+
+<Proof> 
+
+Consider a sample space partitioned as follows:
+
+<PARTITION_1/>
+
+</Proof> 
 
 export default function MDXPage({ children }) {
     return <MdxLayout>{children}</MdxLayout>

@@ -20,6 +20,12 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     },
     Warning: () => <span className="warning">&#9888;</span>,
     Procedure: (props) => <div className="procedure">{props.children}</div>,
+    Proof: (props) => <div className="proof">
+      <span className="title">proof</span>
+      <div className="body">
+        {props.children}
+      </div>
+      </div>,
     Checklist: (props) => <div className="checklist">{props.children}</div>,
     TOC: (props) => (
       <div className="toc">

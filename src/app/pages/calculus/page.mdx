@@ -25,6 +25,10 @@ import {TANGENT_LINE, SQUEEZE_THEOREM} from "@/components/Calculus"
     - [Limit Inequality Theorem](#limit-inequality-theorem)
     - [The Squeeze Theorem](#the-squeeze-theorem)
 - [Continuity](#continuity)
+  - [Implied Continuity](#implied-continuity)
+  - [Polynomial Continuity](#polynomial-continuity)
+  - [Rational Continuity](#rational-continuity)
+  - [The Intermediate Value Theorem](#the-intermediate-value-theorem)
   - [Discontinuity](#discontinuity)
 
 
@@ -185,15 +189,69 @@ where ${n}$ is a positive integer. If ${n}$ is even, we assume ${a \gt 0.}$
   $$
     \lim_{x \to a} f(x) = f(a).
   $$
+- The following functions are all continuous:
+  <Cols of="2">
+  <div>
+    - polynomials
+    - rational functions
+    - root functions
+  </div>
+  <div>
+    - trigonometric functions
+    - inverse trigonometric functions
+    - exponential functions
+    - logarithmic functions
+  </div>
+  </Cols>
+
 - From this definition, we have the following checklist for continuity at a point:
   <Checklist> 
     - ${a}$ is in the domain of ${f}$ (i.e, ${f(a)}$ is defined).
     - ${\lim\limits_{x \to a} f(x)}$ exists.
     - ${\lim\limits_{x \to a} f(x) = f(a).}$
   </Checklist> 
+- __*definition*__. A function ${f}$ is continous from the right at a number ${a}$ if
+  $$
+    \lim\limits_{x \to a^+} f(x) = f(a).
+  $$
+  The function ${f}$ is continuous from the left at ${a}$ if
+  $$
+    \lim\limits_{x \to a^-} f(x) = f(a).
+  $$
+- __*definition*__. A function ${f}$ is contiuous on an interval if it is continuous at every number in the interval.
+
+### Implied Continuity
+- Suppose ${f}$ and ${g}$ are continuous at ${a}$ and ${c}$ is a constant. Then the following functions are also continuous at ${a:}$ 
+  <Cols of="3">
+  $$
+    f + g \\[1em]
+    f - g \\[1em]
+    c\,f
+  $$
+  $$
+    fg \\[1em]
+    \dfrac{f}{g} ~~ (\text{provided}~~g(a) \neq 0)
+  $$
+  </Cols>
+- __*theorem*__. If ${f}$ is continuous at ${b}$ and ${\lim\limits_{x \to a} g(x) = b,}$ then ${\lim\limits_{x \to a} f(g(x)) = f(b).}$ I.e., 
+  $$
+    \lim\limits_{x \to a} f(g(x)) = f(\lim\limits_{x \to a} g(x)).
+  $$
+- __*theorem*__. If ${g}$ is continuous at ${a}$ and ${f}$ is continuous at ${g(a),}$ then the composite function ${f \circ g}$ is continuous at ${a.}$
+
+  
+### Polynomial Continuity
+- __*theorem*__. All polynomials are continuous everywhere.
+
+### Rational Continuity
+- __*theorem*__. Any rational function is continuous wherever it is defined.
+
+### The Intermediate Value Theorem
+- __*theorem*__. Suppose ${f}$ is continuous on the closed interval ${[a,b]}$ and let ${N}$ be any number between ${f(a)}$ and ${f(b),}$ where ${f(a) \neq f(b).}$ Then there exists a number ${c}$ in ${[ a, b]}$ such that ${f(c) = N.}$
 
 ### Discontinuity
 - If ${f}$ is not continous at ${a,}$ we say that ${f}$ is __discontinuous__ at ${a.}$
+
 
 export default function MDXPage({ children }) {
     return <MdxLayout>{children}</MdxLayout>

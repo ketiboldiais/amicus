@@ -4,11 +4,17 @@ export enum token_type {
   error,
   empty,
   // paired delimiters
+  /** Lexeme: `(` */
   left_paren,
+  /** Lexeme: `)` */
   right_paren,
+  /** Lexeme: `{` */
   left_brace,
+  /** Lexeme: `}` */
   right_brace,
+  /** Lexeme: `[` */
   left_bracket,
+  /** Lexeme: `]` */
   right_bracket,
   // unary delimiters
   semicolon,
@@ -23,9 +29,9 @@ export enum token_type {
   caret,
   percent,
   bang,
-  ampersand,
-  tilde,
+  // relational operators 
   vbar,
+  tilde,
   equal,
   less,
   greater,
@@ -33,10 +39,13 @@ export enum token_type {
   greater_equal,
   bang_equal,
   equal_equal,
+  // tickers
   plus_plus,
   minus_minus,
   star_star,
-  // vector operator
+  // list operators
+  ampersand,
+  // vector operators
   dot_add,
   dot_star,
   dot_minus,
