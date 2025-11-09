@@ -39,10 +39,11 @@ export enum token_type {
   greater_equal,
   bang_equal,
   equal_equal,
+  // assignment operator
+  colon_equal,
   // tickers
   plus_plus,
   minus_minus,
-  star_star,
   // list operators
   ampersand,
   // vector operators
@@ -52,9 +53,9 @@ export enum token_type {
   dot_caret,
   at,
   // matrix operators
-  pound_plus,
-  pound_minus,
-  pound_star,
+  star_plus,
+  star_minus,
+  star_star,
   // literals
   integer,
   float,
@@ -91,9 +92,6 @@ export enum token_type {
   rem,
   mod,
   div,
-  native,
   // algebraic strings
   algebra_string,
-  // structures
-  list,
 }

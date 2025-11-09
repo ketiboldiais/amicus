@@ -615,7 +615,7 @@ div.procedure {
   counter-reset: lineNumber -1;
   border-top: solid thin lightgray;
   border-bottom: solid thin lightgray;
-  padding: 1em 0 1em 0;
+  padding: 5px 0 5px 0;
   margin: 1em 1.5em;
   /* font-size: 0.9em; */
   overflow-y: scroll;
@@ -702,7 +702,7 @@ div.procedure ol li li li li li li::before {
   right: 6.1rem;
 }
 div.procedure > ol {
-  margin-top: 6px;
+  /* margin-top: 6px; */
   /* margin-left: 1em; */
 }
 div.procedure ul {
@@ -738,10 +738,15 @@ div.procedure li > p {
 
 details {
   border-left: solid 3px rgb(222, 222, 222);
-  border-radius: 2px;
+  /* border-radius: 2px; */
   /* padding: 0px 8px; */
   padding-left: 8px;
   /* background-color: rgb(228, 228, 228); */
+  margin-left: 8px;
+}
+
+summary:hover {
+  cursor: pointer;
 }
 
 .text-center {
@@ -804,4 +809,12 @@ div.proof span.title {
   padding: 2px 10px;
   /* border-bottom: 1px solid grey; */
   border-radius: 5px 5px 0px 0px;
+}
+
+em code {
+  font-style: normal;
+  display: inline-block;
+  background-color: lightgray;
+  padding: 0 3px;
+  border-radius: 2px;
 }

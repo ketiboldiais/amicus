@@ -13,7 +13,14 @@ import {
 
 <TOC>
 
-
+- [Probabilistic Models](#probabilistic-models)
+- [Sample Space](#sample-space)
+  - [Events](#events)
+- [The Probability Axioms](#the-probability-axioms)
+- [Probability Upper Bound Lemma](#probability-upper-bound-lemma)
+- [Probability of Nothing](#probability-of-nothing)
+- [General Finite Additivity Axiom](#general-finite-additivity-axiom)
+- [Relative Size Lemma](#relative-size-lemma)
 
 </TOC>
 
@@ -53,7 +60,7 @@ import {
   3. __*axiom iii*__. If ${A \cap B = \varnothing,}$ then ${\text{P}(A \cup B) = \text{P}(A) + \text{P}(B).}$
       - The notation ${A \cap B = \varnothing}$ means ${A}$ and ${B}$ are disjoint—the sets ${A}$ and ${B}$ have no elements in common. In probability terms, this means that ${A}$ and ${B}$ are _disjoint events_ — they cannot both occur.
 
-## Probability Maximum Lemma
+## Probability Upper Bound Lemma
 - Given an event ${E,}$ it follows that ${\text{P}(E) \leq 1.}$
 
 <Proof> 
@@ -62,7 +69,67 @@ Consider a sample space partitioned as follows:
 
 <PARTITION_1/>
 
+We have ${A \cup A^c = \Omega.}$ Since these are partitions, we also have ${A \cap A^c = \varnothing.}$ We know ${P(\Omega) = 1.}$ Since ${\Omega = A \cup A^c,}$ it follows that 
+$$
+  \text{P}(A \cup A^c) = 1.
+$$
+Given ${A \cap A^c = \varnothing,}$ ${A}$ and ${A^c}$ are disjoint. So, we can write ${\text{P}(A \cup A^c)}$ as the sum of ${\text{P}(A)}$ and ${\text{P}(A^c):}$
+$$
+  \text{P}(A \cup A^c) = \text{P}(A) + \text{P}(A^c).
+$$
+Since ${\text{P}(A \cup A^c) = \text{P}(\Omega) = 1,}$ it follows that
+$$
+  1 = \text{P}(A) + \text{P}(A^c).
+$$
+Isolating:
+$$
+  \text{P}(A) = 1 - \text{P}(A^c).
+$$
+By the nonnegativity axiom, ${\text{P}(A^c) \geq 0.}$ Hence, ${1 - \text{P}(A^c) \leq 1.}$ Therefore, ${\text{P}(A) \leq 1.}$
+
 </Proof> 
+
+## Probability of Nothing
+- __*lemma*__. Given a sample space ${\Omega,}$ we have
+  $$
+    \text{P}(\varnothing) = 0.
+  $$
+
+<Proof>
+
+We have
+$$
+  1 = \text{P}(\Omega) + P(\Omega^c),
+$$
+Since the probability of an event and its complement is always ${1.}$ Since ${\Omega}$ contains all outcomes (it is, after all, the sample space), it follows that ${\Omega^c = \varnothing.}$ Thus,
+
+$$
+  1 = \text{P}(\Omega) + \text{P}(\varnothing).
+$$
+
+We know that ${\text{P}(\Omega) = 1.}$ So,
+
+$$
+  1 = 1 + \text{P}(\varnothing).
+$$
+
+Therefore, it must be the case that:
+
+$$
+  \text{P}(\varnothing) = 0.
+$$
+
+</Proof>
+
+## General Finite Additivity Axiom
+- __*axiom*__. Given ${n}$ disjoint events ${E_1, E_2, \ldots, E_n,}$ we have
+  $$
+    \text{P}\left( \bigcup_{k = 1}^n E_k \right) = \sum_{k = 1}^n \text{P}(E_k).
+  $$
+
+## Relative Size Lemma
+- __*lemma*__. If ${A \subset B,}$ then ${\text{P}(A) \leq \text{P}(B).}$
+- In other words, if ${A \subset B,}$ then the probability of ${A}$ occurring is at least as likely as ${B}$ occurring.
 
 export default function MDXPage({ children }) {
     return <MdxLayout>{children}</MdxLayout>

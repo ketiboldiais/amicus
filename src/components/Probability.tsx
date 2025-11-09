@@ -43,5 +43,5 @@ export const RECTANGLE_TARGET = () => (
 
 
 export const PARTITION_1 = () => (
-  <Img width={120} url={partition_1} alt="Partitioned sample space." />
+  <Img width={110} url={partition_1} alt="Partitioned sample space." />
 ); 

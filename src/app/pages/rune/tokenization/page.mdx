@@ -12,6 +12,15 @@ import {TANGENT_LINE} from "@/components/Calculus"
   - [Paired Delimiters](#paired-delimiters)
   - [Unary Delimiters](#unary-delimiters)
   - [Algebraic Operators](#algebraic-operators)
+  - [Relational Operators](#relational-operators)
+  - [Assignment Operator](#assignment-operator)
+  - [Tickers](#tickers)
+  - [List Operators](#list-operators)
+  - [Vector Operators](#vector-operators)
+  - [Matrix Operators](#matrix-operators)
+  - [Literals](#literals)
+  - [Keywords](#keywords)
+- [Scanning](#scanning)
 
 </TOC>
 
@@ -78,7 +87,202 @@ Unary delimiters are single, stand-alone token types. They are akin to punctuati
 | `comma`     | `","`  |
 
 ### Algebraic Operators
-These token types correspond signify algebraic operations. 
+These token types correspond to algebraic operations. 
+
+| Token Type | Lexeme |
+| ---------- | ------ |
+| `plus`     | `"+"`  |
+| `minus`    | `"-"`  |
+| `star`     | `"*"`  |
+| `slash`    | `"/"`  |
+| `caret`    | `"^"`  |
+| `percent`  | `"%"`  |
+| `bang`     | `"!"`  |
+
+### Relational Operators
+These token types correspond to relation operations.
+
+| Token Type      | Lexeme |
+| --------------- | ------ |
+| `vbar`          | `"\|"` |
+| `tilde`         | `"~"`  |
+| `equal`         | `"="`  |
+| `less`          | `"<"`  |
+| `greater`       | `">"`  |
+| `less_equal`    | `"<="` |
+| `greater_equal` | `">="` |
+| `bang_equal`    | `"!="` |
+| `equal_equal`   | `"=="` |
+
+### Assignment Operator
+This token type corresponds to _assignment_ or _definition_.
+
+| Token Type    | Lexeme |
+| ------------- | ------ |
+| `colon_equal` | `":="` |
+
+### Tickers
+These token types correspond to increment- and decrement-assign.
+
+| Token Type    | Lexeme |
+| ------------- | ------ |
+| `plus_plus`   | `"++"` |
+| `minus_minus` | `"--"` |
+
+### List Operators
+These token types correspond to list operations.
+
+| Token Type  | Lexeme |
+| ----------- | ------ |
+| `ampersand` | `"&"`  |
+
+### Vector Operators
+These token types correspond to mathematical vector operations.
+
+| Token Type  | Lexeme |
+| ----------- | ------ |
+| `dot_add`   | `".+"` |
+| `dot_star`  | `".*"` |
+| `dot_minus` | `".-"` |
+| `dot_caret` | `".^"` |
+| `at`        | `"@"`  |
+
+### Matrix Operators
+These token types correspond to matrix operations.
+
+| Token Type   | Lexeme |
+| ------------ | ------ |
+| `star_plus`  | `"*+"` |
+| `star_minus` | `"*-"` |
+| `star_star`  | `"**"` |
+
+### Literals
+These token types correspond to literal values. The table below uses _Backus-Naur form_ for notation. Angle-bracketed terms correspond to expressions. These expressions are defined as follows:
+
+- _`<digit>`_ : The digits ${0}$ through ${9.}$
+- _`<letter>`_ : Symbols from the Latin alphabet, lower- and upper-case, (${a \ldots z}$ and ${A \ldots Z}$).
+- _`<*>`_ : Any symbol. 
+
+<table>
+  <thead>
+    <tr>
+      <th>Token Type</th>
+      <th>Lexeme</th>
+      <th>Remark</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>`integer`</td>
+      <td>(_`<1...9>`_ _`<digit>`_ `...` _`<digit>`_)</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>`float`</td>
+      <td>_`<integer>`_ _`"."`_ _`<integer>`_</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>`fraction`</td>
+      <td>_`<integer>`_ _`"/"`_ _`<integer>`_</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>`scientific`</td>
+      <td>_`<float>`_ _`"E"`_ (_`"+"`_ | _`"-"`_) _`<integer>`_</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>`big_integer`</td>
+      <td>_`"#"`_ _`<integer>`_</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>`symbol`</td>
+      <td>(_`<letter>`_ ... _`<letter>`_)</td>
+      <td>_The sequence cannot be a keyword or reserved word._</td>
+    </tr>
+    <tr>
+      <td>`string`</td>
+      <td>_`"`_ _`<*>`_ _`"`_</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>`boolean`</td>
+      <td>(_`"true"`_ | _`"false"`_)</td>
+      <td>_These are reserved words._</td>
+    </tr>
+    <tr>
+      <td>`nan`</td>
+      <td>_`"NaN"`_</td>
+      <td>_This is a reserved word._</td>
+    </tr>
+    <tr>
+      <td>`inf`</td>
+      <td>_`"inf"`_</td>
+      <td>_This is a reserved word._</td>
+    </tr>
+    <tr>
+      <td>`nil`</td>
+      <td>_`"nil"`_</td>
+      <td>_This is a reserved word._</td>
+    </tr>
+    <tr>
+      <td>`numeric_constant`</td>
+      <td>(_`"e"`_ | _`"pi"`_)</td>
+      <td>_This is a reserved word._</td>
+    </tr>
+  </tbody>
+</table>
+
+### Keywords
+The following token types correspond to keywords in Rune.
+
+| Token Type | Lexeme     |
+| ---------- | ---------- |
+| `and`      | `"and"`    |
+| `or`       | `"or"`     |
+| `not`      | `"not"`    |
+| `nand`     | `"nand"`   |
+| `xor`      | `"xor"`    |
+| `xnor`     | `"xnor"`   |
+| `nor`      | `"nor"`    |
+| `if`       | `"if"`     |
+| `else`     | `"else"`   |
+| `fn`       | `"fn"`     |
+| `let`      | `"let"`    |
+| `var`      | `"var"`    |
+| `return`   | `"return"` |
+| `while`    | `"while"`  |
+| `for`      | `"for"`    |
+| `class`    | `"class"`  |
+| `print`    | `"print"`  |
+| `super`    | `"super"`  |
+| `this`     | `"this"`   |
+| `rem`      | `"rem"`    |
+| `mod`      | `"mod"`    |
+| `div`      | `"div"`    |
+
+## Scanning
+Now that we've listed all the possible tokens, we can begin writing the scanning procedure. In the source code, the scanning procedure is found in the _`lexical`_ function. This function takes a single argument, ${code,}$ of type _string_—this is the source code supplied by the user.
+
+<Procedure>
+
+1. __function__ ${lexical}$`(`${code}$: string`)`:
+    1. __let__ ${line}$: ${\Z^+}$ = ${1}$
+    2. __let__ ${start}$: ${\Z^+}$ = ${0}$
+    3. __let__ ${current}$: ${\Z^+}$ = ${0}$
+    4. __let__ ${error}$: ${\varnothing}$ | `ErrorObj` = ${\varnothing}$
+
+</Procedure>
+
+Immediately within this procedure, we initiate several mutable variables:
+
+1. ${line}$ - A variable bound to a natural number, tracking which line we're looking at within the source code.
+2. ${start}$ - Another natural number variable, tracking where we started.
+3. ${current}$ - Another natural number variable, tracking where we currently are.
+4. ${error}$ - A variable bound to either null or an `ErrorObj`, indicating whether an error's occurred.
+
 
 
 export default function MDXPage({ children }) {
